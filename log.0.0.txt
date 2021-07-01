@@ -1,0 +1,40 @@
+июл 01, 2021 12:55:58 PM ord.sdargol.http.server.Server start
+INFO: Server success started
+июл 01, 2021 1:02:17 PM ord.sdargol.http.server.Server start
+INFO: Server success started localhost:8080
+июл 01, 2021 1:02:39 PM ord.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 01, 2021 1:22:25 PM ord.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 01, 2021 1:29:13 PM ord.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 01, 2021 1:30:50 PM ord.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 01, 2021 1:30:57 PM ord.sdargol.http.handlers.TestHandler handleResponse
+INFO: TestHandler run
+июл 01, 2021 1:43:40 PM ord.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 01, 2021 1:43:50 PM ord.sdargol.http.handlers.TestHandler handleResponse
+INFO: TestHandler run
+июл 01, 2021 1:44:19 PM ord.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 01, 2021 1:44:27 PM ord.sdargol.http.handlers.TestHandler handleResponse
+INFO: TestHandler run
+июл 01, 2021 1:44:55 PM ord.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 01, 2021 1:45:02 PM ord.sdargol.http.handlers.TestHandler handleResponse
+INFO: TestHandler run
+июл 01, 2021 1:45:44 PM ord.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 01, 2021 1:45:54 PM ord.sdargol.http.handlers.TestHandler handleResponse
+INFO: TestHandler run
+июл 01, 2021 2:01:23 PM ord.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 01, 2021 2:01:29 PM ord.sdargol.http.handlers.TestHandler handleResponse
+INFO: TestHandler run
+июл 01, 2021 2:03:57 PM ord.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 01, 2021 2:04:02 PM ord.sdargol.http.handlers.TestHandler handleResponse
+INFO: TestHandler run
+июл 01, 2021 2:19:09 PM ord.sdargol.http.handlers.TestHandler handleResponse
+INFO: TestHandler run
