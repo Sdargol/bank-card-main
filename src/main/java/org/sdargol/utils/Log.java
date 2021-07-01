@@ -1,4 +1,4 @@
-package ord.sdargol.utils;
+package org.sdargol.utils;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,8 +1,8 @@
-package ord.sdargol.http.server;
+package org.sdargol.http.server;
 
 import com.sun.net.httpserver.HttpServer;
-import ord.sdargol.http.handlers.TestHandler;
-import ord.sdargol.utils.Log;
+import org.sdargol.http.handlers.TestHandler;
+import org.sdargol.utils.Log;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

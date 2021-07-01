@@ -1,4 +1,4 @@
-package ord.sdargol.utils;
+package org.sdargol.utils;
 
 public class BasicHTML {
     public static String generate(String bodyHtml){

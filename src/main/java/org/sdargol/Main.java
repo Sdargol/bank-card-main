@@ -1,9 +1,9 @@
-package ord.sdargol;
+package org.sdargol;
 
-import ord.sdargol.http.server.Server;
-
-import java.sql.*;
-import java.util.Date;
+import org.sdargol.dto.DTOTest;
+import org.sdargol.http.server.Server;
+import org.sdargol.json.Converter;
+import org.sdargol.json.IConverter;
 
 public class Main {
     /*public static void main(String[] args) {
@@ -27,6 +27,12 @@ public class Main {
     }*/
 
     public static void main(String[] args) {
+        IConverter<DTOTest> c = new Converter<>();
+        String json = c.toJSON(new DTOTest(0, "test"));
+        System.out.println(json);
+        DTOTest dtoTest = c.toJavaObject(json, DTOTest.class);
+        System.out.println(dtoTest.getId() + " " + dtoTest.getInfo());
+
         Server server = new Server();
         server.start();
     }
