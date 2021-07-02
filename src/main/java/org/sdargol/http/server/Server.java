@@ -1,6 +1,7 @@
 package org.sdargol.http.server;
 
 import com.sun.net.httpserver.HttpServer;
+import org.sdargol.http.filters.TestFilter;
 import org.sdargol.http.handlers.TestHandler;
 import org.sdargol.utils.Log;
 
@@ -21,11 +22,18 @@ public class Server {
 
     public void start(){
         String address = HOST + ":" + PORT;
-
         try {
             HttpServer httpServer = HttpServer.create(
                     new InetSocketAddress(HOST, PORT), 0);
-            httpServer.createContext("/test", new TestHandler());
+
+            httpServer.createContext("/", new TestHandler())
+                    .getFilters()
+                    .add(new TestFilter());
+
+            httpServer.createContext("/no-filter", new TestHandler());
+
+            //httpServer.createContext("/", new TestHandler());
+
             httpServer.setExecutor(executorService);
             httpServer.start();
             LOGGER.info("Server success started on " + address);

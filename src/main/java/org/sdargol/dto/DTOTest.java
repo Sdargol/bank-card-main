@@ -3,6 +3,9 @@ package org.sdargol.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DTOTest extends ADTOBase {
+    static {
+        System.out.println("Create DTOTest");
+    }
     @JsonProperty("info")
     private String info;
 

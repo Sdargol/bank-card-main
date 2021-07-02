@@ -1,42 +1,108 @@
-июл 01, 2021 4:37:56 PM org.sdargol.http.server.Server start
+июл 02, 2021 12:45:17 PM org.sdargol.http.server.Server start
 INFO: Server success started on localhost:8080
-июл 01, 2021 4:38:05 PM org.sdargol.http.handlers.TestHandler handleResponse
-INFO: TestHandler run
-июл 01, 2021 4:38:05 PM org.sdargol.http.handlers.TestHandler handleResponse
+июл 02, 2021 12:45:21 PM org.sdargol.http.filters.TestFilter doFilter
+INFO: Run TestFilter
+июл 02, 2021 12:45:21 PM org.sdargol.http.handlers.TestHandler handleResponse
 INFO: null
-июл 01, 2021 4:38:19 PM org.sdargol.http.handlers.TestHandler handleResponse
-INFO: TestHandler run
-июл 01, 2021 4:38:19 PM org.sdargol.http.handlers.TestHandler handleResponse
+июл 02, 2021 1:20:14 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load org.h2.Driver
+июл 02, 2021 1:20:14 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool org.h2.jdbcx.JdbcConnectionPool@7a07c5b4
+июл 02, 2021 1:20:34 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load org.h2.Driver
+июл 02, 2021 1:20:35 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool 0
+июл 02, 2021 1:20:54 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load org.h2.Driver
+июл 02, 2021 1:20:54 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool 10
+июл 02, 2021 1:21:11 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load org.h2.Driver
+июл 02, 2021 1:21:12 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 02, 2021 1:27:49 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load org.h2.Driver
+июл 02, 2021 1:27:50 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 02, 2021 1:37:56 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load org.h2.Driver
+июл 02, 2021 1:37:56 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 02, 2021 1:38:33 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load org.h2.Driver
+июл 02, 2021 1:38:33 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 02, 2021 1:38:46 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load org.h2.Driver
+июл 02, 2021 1:38:46 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 02, 2021 1:41:33 PM org.sdargol.utils.FileLoader listToString
+INFO: Success loading: CREATE TABLE test (id INT);INSERT INTO test (id) VALUES (5),(777),(999);
+июл 02, 2021 1:41:33 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load org.h2.Driver
+июл 02, 2021 1:41:33 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 02, 2021 1:41:45 PM org.sdargol.utils.FileLoader listToString
+INFO: Success loading: CREATE TABLE test (id INT);INSERT INTO test (id) VALUES (5),(777),(999);
+июл 02, 2021 1:41:45 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load org.h2.Driver
+июл 02, 2021 1:41:45 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 02, 2021 1:44:25 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE test (id INT);INSERT INTO test (id) VALUES (5),(777),(999);
+июл 02, 2021 1:44:25 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 02, 2021 1:44:25 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 02, 2021 1:46:26 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE test (id INT);INSERT INTO test (id) VALUES (5),(777),(999);
+июл 02, 2021 1:46:26 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 02, 2021 1:46:26 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 02, 2021 1:47:26 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE test (id INT);INSERT INTO test (id) VALUES (5),(777),(999);
+июл 02, 2021 1:47:26 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 02, 2021 1:47:26 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 02, 2021 2:20:55 PM org.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 02, 2021 2:21:00 PM org.sdargol.http.filters.TestFilter doFilter
+INFO: Run TestFilter
+июл 02, 2021 2:21:00 PM org.sdargol.http.handlers.TestHandler handleResponse
 INFO: null
-июл 01, 2021 4:38:58 PM org.sdargol.http.server.Server start
+июл 02, 2021 2:29:05 PM org.sdargol.http.server.Server start
 INFO: Server success started on localhost:8080
-июл 01, 2021 4:39:02 PM org.sdargol.http.handlers.TestHandler handleResponse
-INFO: /test
-июл 01, 2021 4:39:20 PM org.sdargol.http.handlers.TestHandler handleResponse
-INFO: /test
-июл 01, 2021 4:39:25 PM org.sdargol.http.handlers.TestHandler handleResponse
-INFO: /test
-июл 01, 2021 4:39:37 PM org.sdargol.http.server.Server start
-INFO: Server success started on localhost:8080
-июл 01, 2021 4:39:41 PM org.sdargol.http.handlers.TestHandler handleResponse
-INFO: t=1&r=3
-июл 01, 2021 4:39:51 PM org.sdargol.http.handlers.TestHandler handleResponse
-INFO: t=1&r=3
-июл 01, 2021 4:40:29 PM org.sdargol.http.server.Server start
-INFO: Server success started on localhost:8080
-июл 01, 2021 4:40:34 PM org.sdargol.http.handlers.TestHandler handleResponse
-INFO: /test?t=1&r=3
-июл 01, 2021 4:40:55 PM org.sdargol.http.server.Server start
-INFO: Server success started on localhost:8080
-июл 01, 2021 4:40:59 PM org.sdargol.http.handlers.TestHandler handleResponse
-INFO: t=1&r=3
-июл 01, 2021 4:41:14 PM org.sdargol.http.handlers.TestHandler handleResponse
+июл 02, 2021 2:29:08 PM org.sdargol.http.filters.TestFilter doFilter
+INFO: Run TestFilter
+июл 02, 2021 2:29:08 PM org.sdargol.http.filters.TestFilter doFilter
+INFO: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTIyNTM0OX0.zpaUO_N0knFsu5QlAOpMmXVOWzoyrZMzSLYPzP5AGF5rvH1OVc1VBuyX_KrtkBlYkv2EcwVtpA1Rqjb8D0tvwg
+июл 02, 2021 2:29:08 PM org.sdargol.http.handlers.TestHandler handleResponse
 INFO: null
-июл 01, 2021 5:19:41 PM org.sdargol.http.server.Server start
+июл 02, 2021 2:44:48 PM org.sdargol.http.server.Server start
 INFO: Server success started on localhost:8080
-июл 01, 2021 5:19:48 PM org.sdargol.http.handlers.TestHandler handleResponse
+июл 02, 2021 2:44:52 PM org.sdargol.http.filters.TestFilter doFilter
+INFO: Run TestFilter
+июл 02, 2021 2:44:52 PM org.sdargol.http.handlers.TestHandler handleResponse
 INFO: null
-июл 01, 2021 5:23:20 PM org.sdargol.http.server.Server start
+июл 02, 2021 2:44:56 PM org.sdargol.http.filters.TestFilter doFilter
+INFO: Run TestFilter
+июл 02, 2021 2:44:56 PM org.sdargol.http.handlers.TestHandler handleResponse
+INFO: null
+июл 02, 2021 2:45:01 PM org.sdargol.http.filters.TestFilter doFilter
+INFO: Run TestFilter
+июл 02, 2021 2:45:01 PM org.sdargol.http.handlers.TestHandler handleResponse
+INFO: null
+июл 02, 2021 2:46:26 PM org.sdargol.http.server.Server start
 INFO: Server success started on localhost:8080
-июл 01, 2021 5:23:25 PM org.sdargol.http.handlers.TestHandler handleResponse
+июл 02, 2021 2:46:32 PM org.sdargol.http.filters.TestFilter doFilter
+INFO: Run TestFilter
+июл 02, 2021 2:46:32 PM org.sdargol.http.filters.TestFilter doFilter
+INFO: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTIyNjM5NH0.Si1dCeuTgCyI8xrd1DhyGWuySWAi13x5QVpw_b4JtgUP5N_5SMeOk_ESq0EnG4wBOjEc8pnt_QMV7U58ajLJjQ
+июл 02, 2021 2:46:32 PM org.sdargol.http.handlers.TestHandler handleResponse
+INFO: null
+июл 02, 2021 2:46:42 PM org.sdargol.http.handlers.TestHandler handleResponse
+INFO: null
+июл 02, 2021 2:46:49 PM org.sdargol.http.handlers.TestHandler handleResponse
 INFO: null
