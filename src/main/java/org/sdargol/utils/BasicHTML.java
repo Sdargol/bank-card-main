@@ -1,6 +1,7 @@
 package org.sdargol.utils;
 
 public class BasicHTML {
+    @Deprecated
     public static String generate(String bodyHtml){
         return "<!DOCTYPE html>\n" +
                 "<html lang=\"ru\">\n" +

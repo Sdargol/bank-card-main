@@ -2,11 +2,11 @@ package org.sdargol.json;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.sdargol.dto.ADTOBase;
 
 import java.io.IOException;
+import java.io.Serializable;
 
-public class Converter <T extends ADTOBase> implements IConverter<T> {
+public class Converter <T extends Serializable> implements IConverter<T> {
 
     public String toJSON(T dto){
         ObjectMapper mapper = new ObjectMapper();

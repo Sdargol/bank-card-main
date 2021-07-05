@@ -1,108 +1,714 @@
-июл 02, 2021 12:45:17 PM org.sdargol.http.server.Server start
+июл 05, 2021 12:27:30 PM org.sdargol.http.server.Server start
+INFO: Context " \ " created
+июл 05, 2021 12:27:30 PM org.sdargol.http.server.Server start
 INFO: Server success started on localhost:8080
-июл 02, 2021 12:45:21 PM org.sdargol.http.filters.TestFilter doFilter
-INFO: Run TestFilter
-июл 02, 2021 12:45:21 PM org.sdargol.http.handlers.TestHandler handleResponse
-INFO: null
-июл 02, 2021 1:20:14 PM org.sdargol.db.h2.ConnectionPool <clinit>
-INFO: Success load org.h2.Driver
-июл 02, 2021 1:20:14 PM org.sdargol.db.h2.ConnectionPool <clinit>
-INFO: Create JdbcConnectionPool org.h2.jdbcx.JdbcConnectionPool@7a07c5b4
-июл 02, 2021 1:20:34 PM org.sdargol.db.h2.ConnectionPool <clinit>
-INFO: Success load org.h2.Driver
-июл 02, 2021 1:20:35 PM org.sdargol.db.h2.ConnectionPool <clinit>
-INFO: Create JdbcConnectionPool 0
-июл 02, 2021 1:20:54 PM org.sdargol.db.h2.ConnectionPool <clinit>
-INFO: Success load org.h2.Driver
-июл 02, 2021 1:20:54 PM org.sdargol.db.h2.ConnectionPool <clinit>
-INFO: Create JdbcConnectionPool 10
-июл 02, 2021 1:21:11 PM org.sdargol.db.h2.ConnectionPool <clinit>
-INFO: Success load org.h2.Driver
-июл 02, 2021 1:21:12 PM org.sdargol.db.h2.ConnectionPool <clinit>
-INFO: Create JdbcConnectionPool, max connections: 10
-июл 02, 2021 1:27:49 PM org.sdargol.db.h2.ConnectionPool <clinit>
-INFO: Success load org.h2.Driver
-июл 02, 2021 1:27:50 PM org.sdargol.db.h2.ConnectionPool <clinit>
-INFO: Create JdbcConnectionPool, max connections: 10
-июл 02, 2021 1:37:56 PM org.sdargol.db.h2.ConnectionPool <clinit>
-INFO: Success load org.h2.Driver
-июл 02, 2021 1:37:56 PM org.sdargol.db.h2.ConnectionPool <clinit>
-INFO: Create JdbcConnectionPool, max connections: 10
-июл 02, 2021 1:38:33 PM org.sdargol.db.h2.ConnectionPool <clinit>
-INFO: Success load org.h2.Driver
-июл 02, 2021 1:38:33 PM org.sdargol.db.h2.ConnectionPool <clinit>
-INFO: Create JdbcConnectionPool, max connections: 10
-июл 02, 2021 1:38:46 PM org.sdargol.db.h2.ConnectionPool <clinit>
-INFO: Success load org.h2.Driver
-июл 02, 2021 1:38:46 PM org.sdargol.db.h2.ConnectionPool <clinit>
-INFO: Create JdbcConnectionPool, max connections: 10
-июл 02, 2021 1:41:33 PM org.sdargol.utils.FileLoader listToString
-INFO: Success loading: CREATE TABLE test (id INT);INSERT INTO test (id) VALUES (5),(777),(999);
-июл 02, 2021 1:41:33 PM org.sdargol.db.h2.ConnectionPool <clinit>
-INFO: Success load org.h2.Driver
-июл 02, 2021 1:41:33 PM org.sdargol.db.h2.ConnectionPool <clinit>
-INFO: Create JdbcConnectionPool, max connections: 10
-июл 02, 2021 1:41:45 PM org.sdargol.utils.FileLoader listToString
-INFO: Success loading: CREATE TABLE test (id INT);INSERT INTO test (id) VALUES (5),(777),(999);
-июл 02, 2021 1:41:45 PM org.sdargol.db.h2.ConnectionPool <clinit>
-INFO: Success load org.h2.Driver
-июл 02, 2021 1:41:45 PM org.sdargol.db.h2.ConnectionPool <clinit>
-INFO: Create JdbcConnectionPool, max connections: 10
-июл 02, 2021 1:44:25 PM org.sdargol.utils.FileLoader listToString
-INFO: Success load: CREATE TABLE test (id INT);INSERT INTO test (id) VALUES (5),(777),(999);
-июл 02, 2021 1:44:25 PM org.sdargol.db.h2.ConnectionPool <clinit>
+июл 05, 2021 12:27:33 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:27:33 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:27:33 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 12:27:33 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 12:27:33 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:27:33 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:27:33 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:27:33 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 12:27:33 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 12:27:33 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser <clinit>
+INFO: ControllerManager success load
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-5
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-4
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [NEXT SEARCH]: pool-1-thread-5
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [NEXT SEARCH]: pool-1-thread-4
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [NEXT SEARCH]: pool-1-thread-3
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [NEXT SEARCH]: pool-1-thread-2
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [NEXT SEARCH]: pool-1-thread-1
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE AFTER FULL SEARCH]: null pool-1-thread-2
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE AFTER FULL SEARCH]: null pool-1-thread-4
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE AFTER FULL SEARCH]: null pool-1-thread-3
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE AFTER FULL SEARCH]: null pool-1-thread-5
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE AFTER FULL SEARCH]: null pool-1-thread-1
+июл 05, 2021 12:27:33 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:27:33 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:27:33 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:27:33 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:27:33 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:27:33 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 12:27:33 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 12:27:33 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 12:27:33 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-5
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-4
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 05, 2021 12:27:33 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: [{"id":0, "number":0000 0000 0000 0000}, {"id":1, "number":1111 1111 1111 1111}]
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [NEXT SEARCH]: pool-1-thread-5
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-6
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-7
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [NEXT SEARCH]: pool-1-thread-3
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [NEXT SEARCH]: pool-1-thread-6
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE AFTER FULL SEARCH]: Мой id: 0 pool-1-thread-5
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE AFTER FULL SEARCH]: Мой id: 777 и test: HelloTest pool-1-thread-3
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: Card created
+июл 05, 2021 12:27:33 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE AFTER FULL SEARCH]: Здравствуйте, а вы знаете, что мой id: 1111222233334444 и test: HelloTestHello pool-1-thread-6
+июл 05, 2021 12:36:01 PM org.sdargol.http.url.URLParser <clinit>
+INFO: ControllerManager success load
+июл 05, 2021 12:36:01 PM org.sdargol.http.server.Server start
+INFO: Context " \ " created
+июл 05, 2021 12:36:01 PM org.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 05, 2021 12:36:11 PM org.sdargol.http.url.URLParser <clinit>
+INFO: ControllerManager success load
+июл 05, 2021 12:36:11 PM org.sdargol.http.server.Server start
+INFO: Context " \ " created
+июл 05, 2021 12:36:11 PM org.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 05, 2021 12:36:25 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:36:25 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:36:25 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:36:25 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:36:25 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:36:28 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:37:50 PM org.sdargol.http.url.URLParser <clinit>
+INFO: ControllerManager success load
+июл 05, 2021 12:37:50 PM org.sdargol.http.server.Server start
+INFO: Context " \ " created
+июл 05, 2021 12:37:50 PM org.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 05, 2021 12:37:56 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:37:56 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:37:56 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:37:56 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:37:56 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:38:36 PM org.sdargol.http.server.Server start
+INFO: Context " \ " created
+июл 05, 2021 12:38:37 PM org.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 05, 2021 12:38:40 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:38:40 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:38:40 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:38:40 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:38:40 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:38:42 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:39:12 PM org.sdargol.http.url.URLParser <clinit>
+INFO: ControllerManager success load
+июл 05, 2021 12:39:12 PM org.sdargol.http.server.Server start
+INFO: Context " \ " created
+июл 05, 2021 12:39:12 PM org.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 05, 2021 12:39:17 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:39:17 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:39:17 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:39:17 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:39:17 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 12:39:17 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 12:39:17 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 12:39:17 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 05, 2021 12:39:17 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-4
+июл 05, 2021 12:39:17 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-5
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [NEXT SEARCH]: pool-1-thread-2
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [NEXT SEARCH]: pool-1-thread-4
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [NEXT SEARCH]: pool-1-thread-5
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [NEXT SEARCH]: pool-1-thread-3
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE AFTER FULL SEARCH]: null pool-1-thread-5
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE AFTER FULL SEARCH]: null pool-1-thread-3
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [NEXT SEARCH]: pool-1-thread-1
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE AFTER FULL SEARCH]: null pool-1-thread-4
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE AFTER FULL SEARCH]: null pool-1-thread-2
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE AFTER FULL SEARCH]: null pool-1-thread-1
+июл 05, 2021 12:39:17 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:39:17 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:39:17 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 12:39:17 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 12:39:17 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:39:17 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:39:17 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 12:39:17 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 12:39:17 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-6
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-4
+июл 05, 2021 12:39:17 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [NEXT SEARCH]: pool-1-thread-4
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [NEXT SEARCH]: pool-1-thread-1
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: [{"id":0, "number":0000 0000 0000 0000}, {"id":1, "number":1111 1111 1111 1111}]
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: Card created
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE AFTER FULL SEARCH]: Мой id: 0 pool-1-thread-1
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE AFTER FULL SEARCH]: Мой id: 777 и test: HelloTest pool-1-thread-4
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-7
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [NEXT SEARCH]: pool-1-thread-7
+июл 05, 2021 12:39:17 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE AFTER FULL SEARCH]: Здравствуйте, а вы знаете, что мой id: 1111222233334444 и test: HelloTestHello pool-1-thread-7
+июл 05, 2021 1:03:36 PM org.sdargol.http.url.URLParser <clinit>
+INFO: ControllerManager success load
+июл 05, 2021 1:03:36 PM org.sdargol.http.server.Server start
+INFO: Context " \ " created
+июл 05, 2021 1:03:36 PM org.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 05, 2021 1:03:48 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 1:03:48 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 1:03:48 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 05, 2021 1:03:48 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: [{"id":0, "number":0000 0000 0000 0000}, {"id":1, "number":1111 1111 1111 1111}]
+июл 05, 2021 1:03:49 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 1:03:49 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 1:03:49 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 05, 2021 1:03:49 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 1:03:49 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 1:03:49 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 05, 2021 1:03:49 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 1:03:49 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 1:03:49 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-4
+июл 05, 2021 1:04:53 PM org.sdargol.http.url.URLParser <clinit>
+INFO: ControllerManager success load
+июл 05, 2021 1:04:53 PM org.sdargol.http.server.Server start
+INFO: Context " \ " created
+июл 05, 2021 1:04:53 PM org.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 05, 2021 1:04:57 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 1:04:57 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 1:04:57 PM org.sdargol.http.filters.JSONFilter doFilter
+INFO: JSONFilter run
+июл 05, 2021 1:04:57 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 05, 2021 1:04:57 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: [{"id":0, "number":0000 0000 0000 0000}, {"id":1, "number":1111 1111 1111 1111}]
+июл 05, 2021 1:04:57 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 1:04:57 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 1:04:57 PM org.sdargol.http.filters.JSONFilter doFilter
+INFO: JSONFilter run
+июл 05, 2021 1:04:57 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 05, 2021 1:04:57 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 1:04:57 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 1:04:57 PM org.sdargol.http.filters.JSONFilter doFilter
+INFO: JSONFilter run
+июл 05, 2021 1:04:57 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 05, 2021 1:04:57 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 1:04:57 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 1:04:57 PM org.sdargol.http.filters.JSONFilter doFilter
+INFO: JSONFilter run
+июл 05, 2021 1:04:57 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-4
+июл 05, 2021 1:56:20 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT, number VARCHAR(255));CREATE TABLE users (id INT AUTO_INCREMENT, login VARCHAR(255), password VARCHAR(255));CREATE TABLE accounts (id INT AUTO_INCREMENT, number VARCHAR(255), money INT, user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT, from_user_id INT, to_user_id INT, count INT);CREATE TABLE roles (id INT AUTO_INCREMENT, user_id INT, role VARCHAR(255));INSERT INTO test (id) VALUES (5),(777),(999);
+июл 05, 2021 1:56:20 PM org.sdargol.db.h2.ConnectionPool <clinit>
 INFO: Success load: org.h2.Driver
-июл 02, 2021 1:44:25 PM org.sdargol.db.h2.ConnectionPool <clinit>
+июл 05, 2021 1:56:20 PM org.sdargol.db.h2.ConnectionPool <clinit>
 INFO: Create JdbcConnectionPool, max connections: 10
-июл 02, 2021 1:46:26 PM org.sdargol.utils.FileLoader listToString
-INFO: Success load: CREATE TABLE test (id INT);INSERT INTO test (id) VALUES (5),(777),(999);
-июл 02, 2021 1:46:26 PM org.sdargol.db.h2.ConnectionPool <clinit>
+июл 05, 2021 1:56:59 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT, number VARCHAR(255));CREATE TABLE users (id INT AUTO_INCREMENT, login VARCHAR(255), password VARCHAR(255));CREATE TABLE accounts (id INT AUTO_INCREMENT, number VARCHAR(255), money INT, user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT, from_user_id INT, to_user_id INT, count INT);CREATE TABLE roles (id INT AUTO_INCREMENT, user_id INT, role VARCHAR(255));
+июл 05, 2021 1:56:59 PM org.sdargol.db.h2.ConnectionPool <clinit>
 INFO: Success load: org.h2.Driver
-июл 02, 2021 1:46:26 PM org.sdargol.db.h2.ConnectionPool <clinit>
+июл 05, 2021 1:56:59 PM org.sdargol.db.h2.ConnectionPool <clinit>
 INFO: Create JdbcConnectionPool, max connections: 10
-июл 02, 2021 1:47:26 PM org.sdargol.utils.FileLoader listToString
-INFO: Success load: CREATE TABLE test (id INT);INSERT INTO test (id) VALUES (5),(777),(999);
-июл 02, 2021 1:47:26 PM org.sdargol.db.h2.ConnectionPool <clinit>
+июл 05, 2021 1:58:08 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT, number VARCHAR(255));CREATE TABLE users (id INT AUTO_INCREMENT, login VARCHAR(255), password VARCHAR(255));CREATE TABLE accounts (id INT AUTO_INCREMENT, number VARCHAR(255), money INT, user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT, from_user_id INT, to_user_id INT, count INT);CREATE TABLE roles (id INT AUTO_INCREMENT, user_id INT, role VARCHAR(255));INSERT INTO cards (id, number) VALUES (0000000000000001),(0000000000000002),(0000000000000003);
+июл 05, 2021 1:58:08 PM org.sdargol.db.h2.ConnectionPool <clinit>
 INFO: Success load: org.h2.Driver
-июл 02, 2021 1:47:26 PM org.sdargol.db.h2.ConnectionPool <clinit>
+июл 05, 2021 1:58:08 PM org.sdargol.db.h2.ConnectionPool <clinit>
 INFO: Create JdbcConnectionPool, max connections: 10
-июл 02, 2021 2:20:55 PM org.sdargol.http.server.Server start
+июл 05, 2021 1:58:28 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT, number VARCHAR(255));CREATE TABLE users (id INT AUTO_INCREMENT, login VARCHAR(255), password VARCHAR(255));CREATE TABLE accounts (id INT AUTO_INCREMENT, number VARCHAR(255), money INT, user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT, from_user_id INT, to_user_id INT, count INT);CREATE TABLE roles (id INT AUTO_INCREMENT, user_id INT, role VARCHAR(255));INSERT INTO cards (number) VALUES (0000000000000001),(0000000000000002),(0000000000000003);
+июл 05, 2021 1:58:28 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 1:58:28 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 1:59:21 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT, number VARCHAR(255));CREATE TABLE users (id INT AUTO_INCREMENT, login VARCHAR(255), password VARCHAR(255));CREATE TABLE accounts (id INT AUTO_INCREMENT, number VARCHAR(255), money INT, user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT, from_user_id INT, to_user_id INT, count INT);CREATE TABLE roles (id INT AUTO_INCREMENT, user_id INT, role VARCHAR(255));INSERT INTO cards (number) VALUES (0000000000000001),(0000000000000002),(0000000000000003);
+июл 05, 2021 1:59:21 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 1:59:21 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 1:59:45 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT, number VARCHAR(255));CREATE TABLE users (id INT AUTO_INCREMENT, login VARCHAR(255), password VARCHAR(255));CREATE TABLE accounts (id INT AUTO_INCREMENT, number VARCHAR(255), money INT, user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT, from_user_id INT, to_user_id INT, count INT);CREATE TABLE roles (id INT AUTO_INCREMENT, user_id INT, role VARCHAR(255));INSERT INTO cards (number) VALUES (0000000000000001),(0000000000000002),(0000000000000003);
+июл 05, 2021 1:59:45 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 1:59:45 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 2:00:14 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT, number VARCHAR(255));CREATE TABLE users (id INT AUTO_INCREMENT, login VARCHAR(255), password VARCHAR(255));CREATE TABLE accounts (id INT AUTO_INCREMENT, number VARCHAR(255), money INT, user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT, from_user_id INT, to_user_id INT, count INT);CREATE TABLE roles (id INT AUTO_INCREMENT, user_id INT, role VARCHAR(255));INSERT INTO cards (number) VALUES ('0000000000000001'),('0000000000000002'),('0000000000000003');
+июл 05, 2021 2:00:14 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 2:00:14 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 2:48:02 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT, number VARCHAR(255));CREATE TABLE users (id INT AUTO_INCREMENT, login VARCHAR(255), password VARCHAR(255));CREATE TABLE accounts (id INT AUTO_INCREMENT, number VARCHAR(255), money INT, user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT, from_user_id INT, to_user_id INT, count INT);CREATE TABLE roles (id INT AUTO_INCREMENT, user_id INT, role VARCHAR(255));INSERT INTO cards (number) VALUES ('0000000000000001'),('0000000000000002'),('0000000000000003');
+июл 05, 2021 2:48:02 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 2:48:02 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 2:49:34 PM org.sdargol.http.url.URLParser <clinit>
+INFO: ControllerManager success load
+июл 05, 2021 2:49:34 PM org.sdargol.http.server.Server start
+INFO: Context " \ " created
+июл 05, 2021 2:49:34 PM org.sdargol.http.server.Server start
 INFO: Server success started on localhost:8080
-июл 02, 2021 2:21:00 PM org.sdargol.http.filters.TestFilter doFilter
-INFO: Run TestFilter
-июл 02, 2021 2:21:00 PM org.sdargol.http.handlers.TestHandler handleResponse
-INFO: null
-июл 02, 2021 2:29:05 PM org.sdargol.http.server.Server start
-INFO: Server success started on localhost:8080
-июл 02, 2021 2:29:08 PM org.sdargol.http.filters.TestFilter doFilter
-INFO: Run TestFilter
-июл 02, 2021 2:29:08 PM org.sdargol.http.filters.TestFilter doFilter
-INFO: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTIyNTM0OX0.zpaUO_N0knFsu5QlAOpMmXVOWzoyrZMzSLYPzP5AGF5rvH1OVc1VBuyX_KrtkBlYkv2EcwVtpA1Rqjb8D0tvwg
-июл 02, 2021 2:29:08 PM org.sdargol.http.handlers.TestHandler handleResponse
-INFO: null
-июл 02, 2021 2:44:48 PM org.sdargol.http.server.Server start
-INFO: Server success started on localhost:8080
-июл 02, 2021 2:44:52 PM org.sdargol.http.filters.TestFilter doFilter
-INFO: Run TestFilter
-июл 02, 2021 2:44:52 PM org.sdargol.http.handlers.TestHandler handleResponse
-INFO: null
-июл 02, 2021 2:44:56 PM org.sdargol.http.filters.TestFilter doFilter
-INFO: Run TestFilter
-июл 02, 2021 2:44:56 PM org.sdargol.http.handlers.TestHandler handleResponse
-INFO: null
-июл 02, 2021 2:45:01 PM org.sdargol.http.filters.TestFilter doFilter
-INFO: Run TestFilter
-июл 02, 2021 2:45:01 PM org.sdargol.http.handlers.TestHandler handleResponse
-INFO: null
-июл 02, 2021 2:46:26 PM org.sdargol.http.server.Server start
-INFO: Server success started on localhost:8080
-июл 02, 2021 2:46:32 PM org.sdargol.http.filters.TestFilter doFilter
-INFO: Run TestFilter
-июл 02, 2021 2:46:32 PM org.sdargol.http.filters.TestFilter doFilter
-INFO: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTIyNjM5NH0.Si1dCeuTgCyI8xrd1DhyGWuySWAi13x5QVpw_b4JtgUP5N_5SMeOk_ESq0EnG4wBOjEc8pnt_QMV7U58ajLJjQ
-июл 02, 2021 2:46:32 PM org.sdargol.http.handlers.TestHandler handleResponse
-INFO: null
-июл 02, 2021 2:46:42 PM org.sdargol.http.handlers.TestHandler handleResponse
-INFO: null
-июл 02, 2021 2:46:49 PM org.sdargol.http.handlers.TestHandler handleResponse
-INFO: null
+июл 05, 2021 2:49:39 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 2:49:39 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 2:49:39 PM org.sdargol.http.filters.JSONFilter doFilter
+INFO: JSONFilter run
+июл 05, 2021 2:49:39 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 05, 2021 2:49:39 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: [{"id":0, "number":0000 0000 0000 0000}, {"id":1, "number":1111 1111 1111 1111}]
+июл 05, 2021 2:49:39 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 2:49:39 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 2:49:39 PM org.sdargol.http.filters.JSONFilter doFilter
+INFO: JSONFilter run
+июл 05, 2021 2:49:39 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 05, 2021 2:49:39 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 2:49:39 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 2:49:39 PM org.sdargol.http.filters.JSONFilter doFilter
+INFO: JSONFilter run
+июл 05, 2021 2:49:39 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 05, 2021 2:49:39 PM org.sdargol.http.filters.JWTFilter doFilter
+INFO: JWT Filter run
+июл 05, 2021 2:49:39 PM org.sdargol.http.filters.CORSFilter doFilter
+INFO: CORS Filter run
+июл 05, 2021 2:49:39 PM org.sdargol.http.filters.JSONFilter doFilter
+INFO: JSONFilter run
+июл 05, 2021 2:49:39 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-4
+июл 05, 2021 3:32:31 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number VARCHAR(255));CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY ,number VARCHAR(255), money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT );INSERT INTO cards (number) VALUES ('0000000000000001'),('0000000000000002'),('0000000000000003');
+июл 05, 2021 3:32:31 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 3:32:31 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 3:35:54 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number VARCHAR(255),status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number VARCHAR(255), money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT );INSERT INTO cards (number) VALUES ('0000000000000001'),('0000000000000002'),('0000000000000003');
+июл 05, 2021 3:35:54 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 3:35:54 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 3:41:25 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT,status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT );INSERT INTO cards (number) VALUES ('0000000000000001'),('0000000000000002'),('0000000000000003');
+июл 05, 2021 3:41:25 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 3:41:25 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 3:42:13 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT,status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT );INSERT INTO cards (number) VALUES (1234123412341234),(1234123412341235),(1234123412341236);
+июл 05, 2021 3:42:13 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 3:42:13 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 3:43:49 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT DEFAULT(1234123412341234),status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT );INSERT INTO cards (status) VALUES (false),(false),(false);
+июл 05, 2021 3:43:49 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 3:43:49 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 3:44:31 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT),status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT );INSERT INTO cards (status) VALUES (false),(false),(false);
+июл 05, 2021 3:44:31 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 3:44:31 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 3:44:50 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT ),status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT );INSERT INTO cards (status) VALUES (false),(false),(false);
+июл 05, 2021 3:44:50 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 3:44:50 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 3:45:12 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT ),status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT );
+июл 05, 2021 3:45:12 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 3:45:12 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 3:45:39 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT ),status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT );
+июл 05, 2021 3:45:39 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 3:45:39 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 3:46:00 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, ),status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT );
+июл 05, 2021 3:46:00 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 3:46:00 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 3:46:14 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, ),status BOOLEAN);
+июл 05, 2021 3:46:14 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 3:46:14 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 3:46:24 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT,status BOOLEAN);
+июл 05, 2021 3:46:24 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 3:46:24 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 3:46:33 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT );
+июл 05, 2021 3:46:33 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 3:46:33 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 3:47:29 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT,status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT );INSERT INTO cards (status) VALUES (TRUE),(TRUE),(TRUE);
+июл 05, 2021 3:47:29 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 3:47:29 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 3:48:02 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT,status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT );INSERT INTO cards (status) VALUES (TRUE),(TRUE),(TRUE);
+июл 05, 2021 3:48:02 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 3:48:02 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 3:48:10 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT,status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT );INSERT INTO cards (status) VALUES (TRUE),(TRUE),(TRUE);
+июл 05, 2021 3:48:10 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 3:48:10 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 3:48:47 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1),status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT );INSERT INTO cards (status) VALUES (TRUE),(TRUE),(TRUE);
+июл 05, 2021 3:48:47 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 3:48:47 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:07:06 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1),status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT,FOREIGN KEY (card_id) REFERENCES cards(id));INSERT INTO cards (status) VALUES (TRUE),(TRUE),(TRUE);
+июл 05, 2021 4:07:06 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:07:07 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:07:23 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1),status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT,FOREIGN KEY (card_id) REFERENCES cards(id) ON CASCADE DELETE);INSERT INTO cards (status) VALUES (TRUE),(TRUE),(TRUE);
+июл 05, 2021 4:07:23 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:07:23 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:08:07 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1),status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT,CONSTRAINT FOREIGN KEY (card_id) REFERENCES cards(id) ON CASCADE DELETE);INSERT INTO cards (status) VALUES (TRUE),(TRUE),(TRUE);
+июл 05, 2021 4:08:07 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:08:07 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:08:46 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1),status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT,CONSTRAINT FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE),(TRUE),(TRUE);
+июл 05, 2021 4:08:46 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:08:46 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:08:55 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1),status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT,CONSTRAINT FOREIGN KEY (card_id) REFERENCES cards(id));INSERT INTO cards (status) VALUES (TRUE),(TRUE),(TRUE);
+июл 05, 2021 4:08:55 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:08:55 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:09:02 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1),status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT,FOREIGN KEY (card_id) REFERENCES cards(id));INSERT INTO cards (status) VALUES (TRUE),(TRUE),(TRUE);
+июл 05, 2021 4:09:02 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:09:02 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:09:44 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1),status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE),(TRUE),(TRUE);
+июл 05, 2021 4:09:44 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:09:44 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:09:49 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1),status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE),(TRUE),(TRUE);
+июл 05, 2021 4:09:49 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:09:49 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:10:18 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1),status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT );CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE),(TRUE),(TRUE);
+июл 05, 2021 4:10:18 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:10:18 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:10:59 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1),status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255));CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE),(TRUE),(TRUE);
+июл 05, 2021 4:10:59 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:10:59 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:16:42 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1),status BOOLEAN);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT, money INT,user_id INT);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT,to_user_id INT,counts INT,status BOOLEAN);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,role VARCHAR(255),FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,user_id INT,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT,card_id INT,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE),(TRUE),(TRUE);
+июл 05, 2021 4:16:42 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:16:42 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:18:35 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT NOT NULL,money INT NOT NULL,user_id INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT NOT NULL,to_user_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE),(TRUE),(TRUE);
+июл 05, 2021 4:18:35 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:18:35 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:19:46 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT NOT NULL,money INT NOT NULL,user_id INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT NOT NULL,to_user_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO CardsToAccount (account_id, user_id) VALUES (123, 5);
+июл 05, 2021 4:19:46 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:19:46 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:20:18 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT NOT NULL,money INT NOT NULL,user_id INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT NOT NULL,to_user_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO CardsToAccount (account_id, card_id) VALUES (123, 5);
+июл 05, 2021 4:20:18 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:20:18 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:21:42 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT NOT NULL,money INT NOT NULL,user_id INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT NOT NULL,to_user_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE), (TRUE), (TRUE);
+июл 05, 2021 4:21:42 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:21:42 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:24:44 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT NOT NULL,to_user_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money, user_id) VALUES (10000, 1), (250000,2);
+июл 05, 2021 4:24:44 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:24:44 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:26:21 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT NOT NULL,to_user_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money, user_id) VALUES (10000, 1), (250000,2);INSERT INTO transactions (from_user_id, to_user_id, counts, status) VALUES (0,1,5000,TRUE);
+июл 05, 2021 4:26:21 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:26:21 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:26:39 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT NOT NULL,to_user_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money, user_id) VALUES (10000, 1), (250000,2);INSERT INTO transactions (from_user_id, to_user_id, counts, status) VALUES (1,2,5000,TRUE);
+июл 05, 2021 4:26:39 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:26:39 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:28:10 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT NOT NULL,to_user_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money, user_id) VALUES (10000, 1), (250000,2);INSERT INTO transactions (from_user_id, to_user_id, counts, status) VALUES (1,2,5000,TRUE);INSERT INTO roles (user_id, role) VALUES (1,'USER'), (2,'USER'), (2,'ADMIN');
+июл 05, 2021 4:28:10 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:28:10 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:31:59 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT NOT NULL,to_user_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money) VALUES (10000), (250000);INSERT INTO transactions (from_user_id, to_user_id, counts, status) VALUES (1,2,5000,TRUE);INSERT INTO roles (user_id, role) VALUES (1,'USER'), (2,'USER'), (2,'ADMIN');INSERT INTO AccountToUser (account_id, user_id) VALUES (1,1), (2,2);INSERT INTO CardsToAccount (account_id, card_id) VALUES (1,1), (2,2);
+июл 05, 2021 4:31:59 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:31:59 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:47:10 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT NOT NULL,to_user_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money) VALUES (10000), (250000);INSERT INTO transactions (from_user_id, to_user_id, counts, status) VALUES (1,2,5000,TRUE);INSERT INTO roles (user_id, role) VALUES (1,'USER'), (2,'USER'), (2,'ADMIN');INSERT INTO AccountToUser (account_id, user_id) VALUES (1,1), (2,2);INSERT INTO CardsToAccount (account_id, card_id) VALUES (1,1), (2,2);
+июл 05, 2021 4:47:10 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:47:10 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:48:40 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT NOT NULL,to_user_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money) VALUES (10000), (250000);INSERT INTO transactions (from_user_id, to_user_id, counts, status) VALUES (1,2,5000,TRUE);INSERT INTO roles (user_id, role) VALUES (1,'USER'), (2,'USER'), (2,'ADMIN');INSERT INTO AccountToUser (account_id, user_id) VALUES (1,1), (2,2);INSERT INTO CardsToAccount (account_id, card_id) VALUES (1,1), (2,2);
+июл 05, 2021 4:48:40 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:48:40 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:50:49 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT NOT NULL,to_user_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money) VALUES (10000), (250000);INSERT INTO transactions (from_user_id, to_user_id, counts, status) VALUES (1,2,5000,TRUE);INSERT INTO roles (user_id, role) VALUES (1,'USER'), (2,'USER'), (2,'ADMIN');INSERT INTO AccountToUser (account_id, user_id) VALUES (1,1), (2,2);INSERT INTO CardsToAccount (account_id, card_id) VALUES (1,1), (2,2);
+июл 05, 2021 4:50:49 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:50:49 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:51:05 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT NOT NULL,to_user_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money) VALUES (10000), (250000);INSERT INTO transactions (from_user_id, to_user_id, counts, status) VALUES (1,2,5000,TRUE);INSERT INTO roles (user_id, role) VALUES (1,'USER'), (2,'USER'), (2,'ADMIN');INSERT INTO AccountToUser (account_id, user_id) VALUES (1,1), (2,2);INSERT INTO CardsToAccount (account_id, card_id) VALUES (1,1), (2,2);
+июл 05, 2021 4:51:05 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:51:05 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:51:19 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT NOT NULL,to_user_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money) VALUES (10000), (250000);INSERT INTO transactions (from_user_id, to_user_id, counts, status) VALUES (1,2,5000,TRUE);INSERT INTO roles (user_id, role) VALUES (1,'USER'), (2,'USER'), (2,'ADMIN');INSERT INTO AccountToUser (account_id, user_id) VALUES (1,1), (2,2);INSERT INTO CardsToAccount (account_id, card_id) VALUES (1,1), (2,2);
+июл 05, 2021 4:51:19 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:51:19 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:51:23 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT NOT NULL,to_user_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money) VALUES (10000), (250000);INSERT INTO transactions (from_user_id, to_user_id, counts, status) VALUES (1,2,5000,TRUE);INSERT INTO roles (user_id, role) VALUES (1,'USER'), (2,'USER'), (2,'ADMIN');INSERT INTO AccountToUser (account_id, user_id) VALUES (1,1), (2,2);INSERT INTO CardsToAccount (account_id, card_id) VALUES (1,1), (2,2);
+июл 05, 2021 4:51:23 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:51:23 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:52:09 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT NOT NULL,to_user_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money) VALUES (10000), (250000);INSERT INTO transactions (from_user_id, to_user_id, counts, status) VALUES (1,2,5000,TRUE);INSERT INTO roles (user_id, role) VALUES (1,'USER'), (2,'USER'), (2,'ADMIN');INSERT INTO AccountToUser (account_id, user_id) VALUES (1,1), (2,2);INSERT INTO CardsToAccount (account_id, card_id) VALUES (1,1), (2,2);
+июл 05, 2021 4:52:09 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:52:09 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:53:46 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT NOT NULL,to_user_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money) VALUES (10000), (250000);INSERT INTO transactions (from_user_id, to_user_id, counts, status) VALUES (1,2,5000,TRUE);INSERT INTO roles (user_id, role) VALUES (1,'USER'), (2,'USER'), (2,'ADMIN');INSERT INTO AccountToUser (account_id, user_id) VALUES (1,1), (2,2);INSERT INTO CardsToAccount (account_id, card_id) VALUES (1,1), (2,2);
+июл 05, 2021 4:53:46 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:53:46 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:54:08 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT NOT NULL,to_user_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money) VALUES (10000), (250000);INSERT INTO transactions (from_user_id, to_user_id, counts, status) VALUES (1,2,5000,TRUE);INSERT INTO roles (user_id, role) VALUES (1,'USER'), (2,'USER'), (2,'ADMIN');INSERT INTO AccountToUser (account_id, user_id) VALUES (1,1), (2,2);INSERT INTO CardsToAccount (account_id, card_id) VALUES (1,1), (2,2);
+июл 05, 2021 4:54:08 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:54:08 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:55:04 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT NOT NULL,to_user_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money) VALUES (10000), (250000);INSERT INTO transactions (from_user_id, to_user_id, counts, status) VALUES (1,2,5000,TRUE);INSERT INTO roles (user_id, role) VALUES (1,'USER'), (2,'USER'), (2,'ADMIN');INSERT INTO AccountToUser (account_id, user_id) VALUES (1,1), (2,2);INSERT INTO CardsToAccount (account_id, card_id) VALUES (1,1), (2,2);
+июл 05, 2021 4:55:04 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:55:04 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 4:55:59 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT NOT NULL,to_user_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money) VALUES (10000), (250000);INSERT INTO transactions (from_user_id, to_user_id, counts, status) VALUES (1,2,5000,TRUE);INSERT INTO roles (user_id, role) VALUES (1,'USER'), (2,'USER'), (2,'ADMIN');INSERT INTO AccountToUser (account_id, user_id) VALUES (1,1), (2,2);INSERT INTO CardsToAccount (account_id, card_id) VALUES (1,1), (2,2);
+июл 05, 2021 4:55:59 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 4:55:59 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 05, 2021 5:34:43 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_user_id INT NOT NULL,to_user_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (TRUE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money) VALUES (10000), (250000);INSERT INTO transactions (from_user_id, to_user_id, counts, status) VALUES (1,2,5000,TRUE);INSERT INTO roles (user_id, role) VALUES (1,'USER'), (2,'USER'), (2,'ADMIN');INSERT INTO AccountToUser (account_id, user_id) VALUES (1,1), (2,2);INSERT INTO CardsToAccount (account_id, card_id) VALUES (1,1), (2,2);
+июл 05, 2021 5:34:43 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 05, 2021 5:34:43 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10

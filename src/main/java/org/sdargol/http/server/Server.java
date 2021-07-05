@@ -1,12 +1,20 @@
 package org.sdargol.http.server;
 
+import com.sun.net.httpserver.Filter;
 import com.sun.net.httpserver.HttpServer;
-import org.sdargol.http.filters.TestFilter;
+import org.sdargol.http.filters.CORSFilter;
+import org.sdargol.http.filters.JSONFilter;
+import org.sdargol.http.filters.JWTFilter;
+import org.sdargol.http.handlers.Auth;
+import org.sdargol.http.handlers.EntryPoint;
 import org.sdargol.http.handlers.TestHandler;
 import org.sdargol.utils.Log;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.logging.Level;
@@ -26,11 +34,28 @@ public class Server {
             HttpServer httpServer = HttpServer.create(
                     new InetSocketAddress(HOST, PORT), 0);
 
-            httpServer.createContext("/", new TestHandler())
-                    .getFilters()
-                    .add(new TestFilter());
+            Set<Filter> filters = new LinkedHashSet<>(Arrays.asList(
+                    new JWTFilter(),
+                    new CORSFilter(),
+                    new JSONFilter()
+            ));
 
-            httpServer.createContext("/no-filter", new TestHandler());
+            boolean bContext = httpServer.createContext("/", new EntryPoint())
+                    .getFilters()
+                    .addAll(filters);
+
+            if(bContext){
+                LOGGER.info("Context \" \\ \" created");
+            }
+
+            Set<Filter> authFilters = new LinkedHashSet<>(Arrays.asList(
+                    new CORSFilter(),
+                    new JSONFilter()
+            ));
+
+            httpServer.createContext("/auth", new Auth())
+                    .getFilters()
+                    .addAll(authFilters);
 
             //httpServer.createContext("/", new TestHandler());
 

@@ -1,8 +1,8 @@
 package org.sdargol.json;
 
-import org.sdargol.dto.ADTOBase;
+import java.io.Serializable;
 
-public interface IConverter <T extends ADTOBase>{
+public interface IConverter <T extends Serializable>{
     String toJSON(T dto);
     T toJavaObject(String json, Class<T> cls);
 }

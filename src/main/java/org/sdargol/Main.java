@@ -1,28 +1,25 @@
 package org.sdargol;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.reflections.Reflections;
+import org.sdargol.db.CardDAO;
+import org.sdargol.db.dao.api.ICardDAO;
 import org.sdargol.db.h2.ConnectionPool;
-import org.sdargol.dto.ADTOBase;
-import org.sdargol.dto.DTOTest;
-import org.sdargol.http.server.Server;
+import org.sdargol.dto.CardDTO;
 import org.sdargol.json.Converter;
 import org.sdargol.json.IConverter;
 import org.sdargol.utils.FileLoader;
-import sun.reflect.Reflection;
-import sun.reflect.ReflectionFactory;
+import org.sdargol.http.server.Server;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.sql.*;
-import java.util.*;
+import javax.smartcardio.Card;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.List;
 
 public class Main {
 
-   /* public static void main(String[] args) {
-
+    //INSERT INTO test (id) VALUES (5),(777),(999);
+    public static void main(String[] args) {
         List<String> listFileData = FileLoader.load("/sql/init.sql");
         String sql = FileLoader.listToString(listFileData);
 
@@ -38,39 +35,30 @@ public class Main {
             //statement.execute("INSERT INTO test (id) VALUES (777)");
 
             statement.execute(sql);
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM test");
-
-            while (resultSet.next()){
-                System.out.println(resultSet.getInt("id"));
-            }
-            //System.out.println(resultSet.getInt(1));
             conn.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
+        ICardDAO card = new CardDAO();
+        card.createCard();
+
+        List<CardDTO> allCards = card.getAllCards();
+        allCards.forEach(System.out::println);
+        
         ConnectionPool.dispose();
 
-        try {
-            conn = ConnectionPool.getConnection();
-            Statement statement = conn.createStatement();
-            //statement.execute("CREATE TABLE test (id INT)");
-            statement.execute("INSERT INTO test (id) VALUES (5)");
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM test");
+        /*while (rs.next()){
+            System.out.println(rs.getInt("id") +
+                    " " + rs.getLong("number") +
+                    " " + rs.getBoolean("status"));
+        }*/
 
-            while (resultSet.next()){
-                System.out.println(resultSet.getInt("id"));
-            }
-            //System.out.println(resultSet.getInt(1));
-            conn.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
 
-    }*/
+    }
 
-    public static void main(String[] args) {
-        IConverter<DTOTest> c = new Converter<>();
+    //public static void main(String[] args) {
+        /*IConverter<DTOTest> c = new Converter<>();
         String json = c.toJSON(new DTOTest(0, "test"));
         System.out.println(json);
         DTOTest dtoTest = c.toJavaObject(json, DTOTest.class);
@@ -92,12 +80,15 @@ public class Main {
             e.printStackTrace();
         }
 
-        System.out.println("List: " + s);
+        System.out.println("List: " + s);*/
+
+
 
         /*Server server = new Server();
         server.start();*/
 
-        Reflections r = new Reflections("org.sdargol.dto");
+
+        /*Reflections r = new Reflections("org.sdargol.dto");
 
         Set<Class<? extends ADTOBase>> type = r.getSubTypesOf(ADTOBase.class);
 
@@ -116,6 +107,6 @@ public class Main {
                 InstantiationException |
                 IllegalAccessException e) {
             e.printStackTrace();
-        }
-    }
+        }*/
+    //}
 }

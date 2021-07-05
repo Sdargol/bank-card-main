@@ -1,16 +1,18 @@
-package org.sdargol.dto;
+package org.sdargol.dto.abstracts;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public abstract class ADTOBase {
-    @JsonProperty
+import java.io.Serializable;
+
+public abstract class ADTO implements Serializable {
+    @JsonProperty("id")
     protected Integer id;
 
-    public ADTOBase(Integer id) {
+    public ADTO(Integer id) {
         this.id = id;
     }
 
-    public ADTOBase() {
+    public ADTO() {
     }
 
     public Integer getId() {
