@@ -1,17 +1,16 @@
 package org.sdargol;
 
-import org.sdargol.db.CardDAO;
-import org.sdargol.db.dao.api.ICardDAO;
+import org.sdargol.db.dao.*;
+import org.sdargol.db.dao.api.*;
 import org.sdargol.db.h2.ConnectionPool;
-import org.sdargol.dto.CardDTO;
-import org.sdargol.json.Converter;
-import org.sdargol.json.IConverter;
+import org.sdargol.dto.DTOAccount;
+import org.sdargol.dto.DTORoles;
+import org.sdargol.dto.DTOTransaction;
+import org.sdargol.dto.DTOUser;
+import org.sdargol.dto.request.DTOTransfer;
 import org.sdargol.utils.FileLoader;
-import org.sdargol.http.server.Server;
 
-import javax.smartcardio.Card;
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
@@ -40,20 +39,45 @@ public class Main {
             e.printStackTrace();
         }
 
-        ICardDAO card = new CardDAO();
-        card.createCard();
+        IDAOAccount account = new DAOAccount();
+        IDAOUser user = new DAOUser();
+        DTOUser u = new DTOUser(0, "dimon@gmail.ru", "pass");
+        System.out.println(account.getAll());
+        user.create(u);
+        System.out.println("all: " + account.getAll());
+        System.out.println("all: " + user.getAll());
 
-        List<CardDTO> allCards = card.getAllCards();
-        allCards.forEach(System.out::println);
-        
+        IDAOCard c = new DAOCard();
+        c.getBalance(1234123412341235L);
+
+        /*List<DTOAccount> allAccounts = account.getAll();
+        DTOAccount a = allAccounts.get(allAccounts.size() - 1);
+        a.setMoney(1234567);
+        System.out.println(account.update(a));
+        System.out.println(account.getAll());
+
+        IDAORoles daoRoles = new DAORoles();
+        DTORoles rolesByUserLogin = daoRoles.getRolesByUserId(1);
+        System.out.println(rolesByUserLogin);*/
+
+        /*DTOTransfer transfer = new DTOTransfer(1,2,5755);
+        IDAOTransaction daoTransaction = new DAOTransaction();
+        IDAOAccount acc = new DAOAccount();
+        System.out.println(daoTransaction.getAll());
+        //daoTransaction.create(dtoTransaction);
+        acc.transferMoney(transfer);
+        System.out.println(daoTransaction.getAll());*/
+
         ConnectionPool.dispose();
+
+        //Server server = new Server();
+        //server.start();
 
         /*while (rs.next()){
             System.out.println(rs.getInt("id") +
                     " " + rs.getLong("number") +
                     " " + rs.getBoolean("status"));
         }*/
-
 
     }
 

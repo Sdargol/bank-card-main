@@ -7,9 +7,9 @@ import org.sdargol.utils.Log;
 import java.io.IOException;
 import java.util.logging.Logger;
 
-public class CORSFilter extends Filter {
+public class FilterCORS extends Filter {
     private final static String DESCRIPTION = "Filter for CORS";
-    private final static Logger LOGGER = Log.getLogger(CORSFilter.class.getName());
+    private final static Logger LOGGER = Log.getLogger(FilterCORS.class.getName());
 
     @Override
     public void doFilter(HttpExchange exchange, Chain chain) throws IOException {

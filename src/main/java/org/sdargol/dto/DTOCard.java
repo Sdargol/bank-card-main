@@ -3,16 +3,16 @@ package org.sdargol.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.sdargol.dto.abstracts.ADTO;
 
-public class CardDTO extends ADTO {
+public class DTOCard extends ADTO {
     @JsonProperty("number")
     private Long number;
     private boolean status;
 
-    public CardDTO() {
+    public DTOCard() {
         super();
     }
 
-    public CardDTO(Integer id, Long number, boolean status){
+    public DTOCard(Integer id, Long number, boolean status){
         super(id);
         this.number = number;
         this.status = status;

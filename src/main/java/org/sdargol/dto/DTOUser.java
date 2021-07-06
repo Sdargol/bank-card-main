@@ -2,15 +2,15 @@ package org.sdargol.dto;
 
 import org.sdargol.dto.abstracts.ADTO;
 
-public class UserDTO extends ADTO {
+public class DTOUser extends ADTO {
     private String name;
     private String password;
 
-    public UserDTO() {
+    public DTOUser() {
         super();
     }
 
-    public UserDTO(Integer id, String name, String password) {
+    public DTOUser(Integer id, String name, String password) {
         super(id);
         this.name = name;
         this.password = password;
@@ -30,5 +30,14 @@ public class UserDTO extends ADTO {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "DTOUser{" +
+                "name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", id=" + id +
+                '}';
     }
 }

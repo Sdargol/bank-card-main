@@ -7,7 +7,11 @@ import org.sdargol.controllers.core.request.BaseRequestEntity;
 import org.sdargol.controllers.core.request.RequestEntity;
 import org.sdargol.controllers.method.HTTPMethod;
 
-@RestController(url= "/api/v1/cards")
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+@RestController(url = "/api/v1/cards")
 public class CardController implements IController {
 
     @Mapping(url = "/api/v1/cards")
@@ -28,6 +32,25 @@ public class CardController implements IController {
 
     @Mapping(url = "/api/v1/cards", httpMethod = HTTPMethod.POST)
     public String createCard(BaseRequestEntity requestEntity){
+        try {
+
+            InputStreamReader isr =  new InputStreamReader(requestEntity.getExchange().getRequestBody(),
+                    "utf-8");
+            BufferedReader br = new BufferedReader(isr);
+
+            int b;
+            StringBuilder buf = new StringBuilder(512);
+            while ((b = br.read()) != -1) {
+                buf.append((char) b);
+            }
+
+            System.out.println(buf);
+
+            br.close();
+            isr.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return "Card created";
     }
 

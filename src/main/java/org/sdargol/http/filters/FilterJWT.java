@@ -7,9 +7,9 @@ import org.sdargol.utils.Log;
 import java.io.IOException;
 import java.util.logging.Logger;
 
-public class JWTFilter extends Filter {
+public class FilterJWT extends Filter {
     private final static String DESCRIPTION = "JWT filter";
-    private final static Logger LOGGER = Log.getLogger(JWTFilter.class.getName());
+    private final static Logger LOGGER = Log.getLogger(FilterJWT.class.getName());
 
     @Override
     public void doFilter(HttpExchange exchange, Chain chain) throws IOException {

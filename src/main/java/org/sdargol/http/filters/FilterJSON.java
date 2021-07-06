@@ -7,9 +7,9 @@ import org.sdargol.utils.Log;
 import java.io.IOException;
 import java.util.logging.Logger;
 
-public class JSONFilter extends Filter {
+public class FilterJSON extends Filter {
     private final static String DESCRIPTION = "JSON Filter";
-    private final static Logger LOGGER = Log.getLogger(JSONFilter.class.getName());
+    private final static Logger LOGGER = Log.getLogger(FilterJSON.class.getName());
 
     @Override
     public void doFilter(HttpExchange exchange, Chain chain) throws IOException {

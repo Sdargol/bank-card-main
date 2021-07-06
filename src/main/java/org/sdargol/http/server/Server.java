@@ -2,12 +2,11 @@ package org.sdargol.http.server;
 
 import com.sun.net.httpserver.Filter;
 import com.sun.net.httpserver.HttpServer;
-import org.sdargol.http.filters.CORSFilter;
-import org.sdargol.http.filters.JSONFilter;
-import org.sdargol.http.filters.JWTFilter;
+import org.sdargol.http.filters.FilterCORS;
+import org.sdargol.http.filters.FilterJSON;
+import org.sdargol.http.filters.FilterJWT;
 import org.sdargol.http.handlers.Auth;
 import org.sdargol.http.handlers.EntryPoint;
-import org.sdargol.http.handlers.TestHandler;
 import org.sdargol.utils.Log;
 
 import java.io.IOException;
@@ -35,9 +34,9 @@ public class Server {
                     new InetSocketAddress(HOST, PORT), 0);
 
             Set<Filter> filters = new LinkedHashSet<>(Arrays.asList(
-                    new JWTFilter(),
-                    new CORSFilter(),
-                    new JSONFilter()
+                    new FilterJWT(),
+                    new FilterCORS(),
+                    new FilterJSON()
             ));
 
             boolean bContext = httpServer.createContext("/", new EntryPoint())
@@ -49,8 +48,8 @@ public class Server {
             }
 
             Set<Filter> authFilters = new LinkedHashSet<>(Arrays.asList(
-                    new CORSFilter(),
-                    new JSONFilter()
+                    new FilterCORS(),
+                    new FilterJSON()
             ));
 
             httpServer.createContext("/auth", new Auth())

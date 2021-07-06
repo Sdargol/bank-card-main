@@ -2,20 +2,18 @@ package org.sdargol.dto;
 
 import org.sdargol.dto.abstracts.ADTO;
 
-public class AccountDTO extends ADTO {
+public class DTOAccount extends ADTO {
     Long number;
     Integer money;
-    Integer userId;
 
-    public AccountDTO(){
+    public DTOAccount(){
         super();
     }
 
-    public AccountDTO(Integer id, Long number, Integer money, Integer userId) {
+    public DTOAccount(Integer id, Long number, Integer money) {
         super(id);
         this.number = number;
         this.money = money;
-        this.userId = userId;
     }
 
     public Long getNumber() {
@@ -34,11 +32,12 @@ public class AccountDTO extends ADTO {
         this.money = money;
     }
 
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    @Override
+    public String toString() {
+        return "DTOAccount{" +
+                "number=" + number +
+                ", money=" + money +
+                ", id=" + id +
+                '}';
     }
 }
