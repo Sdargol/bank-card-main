@@ -15,7 +15,7 @@ public class JWTProvider {
 
     public String generateToken(String login){
         Date now = new Date();
-        Date date = new Date(now.getTime() + (10 * 60 + 1000));
+        Date date = new Date(now.getTime() + (1000 * 60)*10);
 
         return Jwts.builder()
                 .setSubject(login)

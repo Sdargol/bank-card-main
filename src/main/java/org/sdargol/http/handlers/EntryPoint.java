@@ -2,6 +2,7 @@ package org.sdargol.http.handlers;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
+import org.sdargol.controllers.core.response.ResponseEntity;
 import org.sdargol.http.url.URLParser;
 
 import java.io.IOException;
@@ -13,20 +14,16 @@ public class EntryPoint implements HttpHandler {
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
-        String jsonResponse = "{\"id\":0,\"info\":\"Test\"}";
+        ResponseEntity response = urlParser.run(exchange);
 
-        urlParser.run(exchange);
-
-        //здесь jsonResponse.length() менять
         try {
-            exchange.sendResponseHeaders(200, jsonResponse.length());
+            exchange.sendResponseHeaders(response.getStatus(), response.getJson().length());
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        //здесь os.write(jsonResponse.getBytes(StandardCharsets.UTF_8)); менять
-        try(OutputStream os = exchange.getResponseBody()){
-            os.write(jsonResponse.getBytes(StandardCharsets.UTF_8));
+        try (OutputStream os = exchange.getResponseBody()) {
+            os.write(response.getJson().getBytes(StandardCharsets.UTF_8));
             os.flush();
         } catch (IOException e) {
             e.printStackTrace();

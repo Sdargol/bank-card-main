@@ -8,8 +8,8 @@ import org.sdargol.dto.response.DTOMessage;
 import java.util.List;
 
 public interface IDAOCard {
-    DTOMessage createCard();
-    List<DTOCard> getAllCards();
+    DTOMessage create(Long number);
+    List<DTOCard> getAll();
     DTOAccount addMoney(DTORefill req);
     DTOAccount getBalance(Long cardNumber);
 }

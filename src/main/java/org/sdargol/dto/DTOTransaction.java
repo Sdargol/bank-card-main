@@ -5,9 +5,9 @@ import org.sdargol.dto.abstracts.ADTO;
 
 public class DTOTransaction extends ADTO {
     @JsonProperty
-    private Integer fromUserId;
+    private Integer fromAccountId;
     @JsonProperty
-    private Integer toUserId;
+    private Integer toAccountId;
     @JsonProperty
     private Integer count;
     @JsonProperty
@@ -19,26 +19,26 @@ public class DTOTransaction extends ADTO {
 
     public DTOTransaction(Integer id, Integer fromUserId, Integer toUserId, Integer count, boolean status) {
         super(id);
-        this.fromUserId = fromUserId;
-        this.toUserId = toUserId;
+        this.fromAccountId = fromUserId;
+        this.toAccountId = toUserId;
         this.count = count;
         this.status = status;
     }
 
-    public Integer getFromUserId() {
-        return fromUserId;
+    public Integer getFromAccountId() {
+        return fromAccountId;
     }
 
-    public void setFromUserId(Integer fromUserId) {
-        this.fromUserId = fromUserId;
+    public void setFromAccountId(Integer fromAccountId) {
+        this.fromAccountId = fromAccountId;
     }
 
-    public Integer getToUserId() {
-        return toUserId;
+    public Integer getToAccountId() {
+        return toAccountId;
     }
 
-    public void setToUserId(Integer toUserId) {
-        this.toUserId = toUserId;
+    public void setToAccountId(Integer toAccountId) {
+        this.toAccountId = toAccountId;
     }
 
     public Integer getCount() {
@@ -60,8 +60,8 @@ public class DTOTransaction extends ADTO {
     @Override
     public String toString() {
         return "DTOTransaction{" +
-                "fromUserId=" + fromUserId +
-                ", toUserId=" + toUserId +
+                "fromAccountId=" + fromAccountId +
+                ", toAccountId=" + toAccountId +
                 ", count=" + count +
                 ", status=" + status +
                 ", id=" + id +

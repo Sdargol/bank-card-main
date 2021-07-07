@@ -21,7 +21,7 @@ public class DAORoles implements IDAORoles {
     private final static Logger LOGGER = Log.getLogger(DAORoles.class.getName());
 
     @Override
-    public DTORoles getRolesByUserId(int id) {
+    public DTORoles getByUserId(int id) {
         DTORoles rolesUser = new DTORoles();
         Set<Roles> roles = new HashSet<>();
         rolesUser.setRoles(roles);
@@ -51,7 +51,7 @@ public class DAORoles implements IDAORoles {
     }
 
     @Override
-    public DTOMessage addRolesForUser(DTORoles roles) {
+    public DTOMessage add(DTORoles roles) {
         DTOMessage msg;
         try(Connection connection = ConnectionPool.getConnection()) {
             String sql = "INSERT INTO roles (user_id, role) VALUES (?,?)";

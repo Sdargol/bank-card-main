@@ -95,6 +95,8 @@ public class DAOAccount implements IDAOAccount {
         int fromAccountNumber = 0;
         int toAccountNumber = 0;
 
+        DTOMessage msg = new DTOMessage();
+
         try(Connection c = ConnectionPool.getConnection()){
             c.setAutoCommit(false);
 
@@ -120,13 +122,13 @@ public class DAOAccount implements IDAOAccount {
 
             System.out.println("from: " + fromAccountNumber + " to " + toAccountNumber);
 
-            //sql = "INSERT INTO transactions (from_user_id, to_user_id, counts, status) VALUES (?, ?, ?, ?);";
-            //ps = c.prepareStatement(sql);
-            //ps.setInt(1,fromAccountNumber);
-            //ps.setInt(2,toAccountNumber);
-            //ps.setInt(3, transfer.getCount());
-            //ps.setBoolean(4,false);
-            //ps.execute();
+            sql = "INSERT INTO transactions (from_account_id, to_account_id, counts, status) VALUES (?, ?, ?, ?);";
+            ps = c.prepareStatement(sql);
+            ps.setInt(1,fromAccountNumber);
+            ps.setInt(2,toAccountNumber);
+            ps.setInt(3, transfer.getCount());
+            ps.setBoolean(4,false);
+            ps.execute();
 
             ps.close();
             c.commit();
@@ -134,14 +136,14 @@ public class DAOAccount implements IDAOAccount {
             e.printStackTrace();
         }
 
-        IDAOTransaction transaction = new DAOTransaction();
+        /*IDAOTransaction transaction = new DAOTransaction();
         DTOTransaction dtoTransaction = new DTOTransaction(0,
                 fromAccountNumber,
                 toAccountNumber,
                 transfer.getCount(),
                 false
-        );
+        );*/
 
-        return transaction.create(dtoTransaction);
+        return msg;
     }
 }

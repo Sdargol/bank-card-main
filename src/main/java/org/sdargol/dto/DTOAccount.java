@@ -1,9 +1,12 @@
 package org.sdargol.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.sdargol.dto.abstracts.ADTO;
 
 public class DTOAccount extends ADTO {
+    @JsonProperty
     Long number;
+    @JsonProperty
     Integer money;
 
     public DTOAccount(){

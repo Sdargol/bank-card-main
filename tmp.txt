@@ -1,0 +1,206 @@
+        IDAOAccount account = new DAOAccount();
+        IDAOUser user = new DAOUser();
+        DTOUser u = new DTOUser(0, "dimon@gmail.ru", "pass");
+        System.out.println(account.getAll());
+        user.create(u);
+        System.out.println("all: " + account.getAll());
+        System.out.println("all: " + user.getAll());
+
+        IDAOCard c = new DAOCard();
+        c.getBalance(1234123412341235L);
+
+        /*List<DTOAccount> allAccounts = account.getAll();
+        DTOAccount a = allAccounts.get(allAccounts.size() - 1);
+        a.setMoney(1234567);
+        System.out.println(account.update(a));
+        System.out.println(account.getAll());
+
+        IDAORoles daoRoles = new DAORoles();
+        DTORoles rolesByUserLogin = daoRoles.getRolesByUserId(1);
+        System.out.println(rolesByUserLogin);*/
+
+        DTOTransfer transfer = new DTOTransfer(777,778,5755);
+        IDAOTransaction daoTransaction = new DAOTransaction();
+        IDAOAccount acc = new DAOAccount();
+        System.out.println(daoTransaction.getAll());
+        //daoTransaction.create(dtoTransaction);
+        acc.transferMoney(transfer);
+        System.out.println(daoTransaction.getAll());
+
+        DTORefill refill = new DTORefill(7000,1234123412341234L);
+        IDAOCard card = new DAOCard();
+        System.out.println(account.getAll());
+        card.addMoney(refill);
+        System.out.println(account.getAll());
+        System.out.println("===============================");
+        System.out.println(card.getAll());
+        System.out.println(card.create(1L));
+        System.out.println(card.getAll());
+
+
+
+
+
+const host = "http://localhost:8080"
+
+export const getAllCities = () => {
+    fetch(host + '/api/v1/cities',
+        {
+            method: "GET",
+            headers: { 'Content-Type': 'application/json;charset=utf-8' }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);  
+        })
+        .catch(e => console.log(e));
+}
+
+export const getAllSortedCities = () => {
+    fetch(host + '/api/v1/cities/sorted',
+        {
+            method: "GET",
+            headers: { 'Content-Type': 'application/json;charset=utf-8' }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);  
+        })
+        .catch(e => console.log(e));
+}
+
+export const getAllSortedDistrictNameCities = () => {
+    fetch(host + '/api/v1/cities/sorted-district-name',
+        {
+            method: "GET",
+            headers: { 'Content-Type': 'application/json;charset=utf-8' }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);  
+        })
+        .catch(e => console.log(e)); 
+}
+
+export const getMaxPopulationCity = () => {
+    fetch(host + '/api/v1/cities/max-population',
+        {
+            method: "GET",
+            headers: { 'Content-Type': 'application/json;charset=utf-8' }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);  
+        })
+        .catch(e => console.log(e));
+}
+
+export const getPopulationRegion = () => {
+    fetch(host + '/api/v1/cities/population-region',
+        {
+            method: "GET",
+            headers: { 'Content-Type': 'application/json;charset=utf-8' }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);  
+        })
+        .catch(e => console.log(e));
+}
+
+
+//===============
+
+export const getCards = () => {
+    fetch(host + '/api/v1/cards',
+        {
+            method: "GET",
+            headers: { 'Content-Type': 'application/json;charset=utf-8' }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);  
+        })
+        .catch(e => console.log(e));
+}
+
+export const getCardByID = () => {
+    fetch(host + '/api/v1/cards/0',
+        {
+            method: "GET",
+            headers: { 'Content-Type': 'application/json;charset=utf-8' }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);  
+        })
+        .catch(e => console.log(e));
+}
+
+export const test = () => {
+    fetch(host + '/api/v1/cards/777/HelloTest',
+        {
+            method: "GET",
+            headers: { 'Content-Type': 'application/json;charset=utf-8' }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);  
+        })
+        .catch(e => console.log(e));
+}
+
+export const createCard = () => {
+    fetch(host + '/api/v1/cards',
+        {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json;charset=utf-8'},
+            body: JSON.stringify({number:1})
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);  
+        })
+        .catch(e => console.log(e));
+}
+
+export const addMoney = () => {
+    fetch(host + '/api/v1/cards/money',
+        {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json;charset=utf-8' },
+            body: JSON.stringify({money: 100 ,number:1234123412341234})
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);  
+        })
+        .catch(e => console.log(e));
+}
+
+export const balance = () => {
+    fetch(host + '/api/v1/cards/money/1234123412341234',
+        {
+            method: "GET",
+            headers: { 'Content-Type': 'application/json;charset=utf-8', 'Authorization': `Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJleHAiOjE2MjU2Njg1MzV9.EbgeUABuIz60y5OKJb2mKJEMvmY1xUp7_6WoMw-yVZ2YRzaV98hoocMEp08vBJUDM8A-oQ3l21MMLtdjCTIiRA` },
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);  
+        })
+        .catch(e => console.log(e));
+}
+
+///api/v1/cards/money/{number}
+export const testHello = () => {
+    fetch(host + '/api/v1/cards/add/1111222233334444/HelloTestHello',
+        {
+            method: "GET",
+            headers: { 'Content-Type': 'application/json;charset=utf-8' }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);  
+        })
+        .catch(e => console.log(e));
+}

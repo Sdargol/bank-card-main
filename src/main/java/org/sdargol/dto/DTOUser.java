@@ -1,9 +1,12 @@
 package org.sdargol.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.sdargol.dto.abstracts.ADTO;
 
 public class DTOUser extends ADTO {
+    @JsonProperty
     private String name;
+    @JsonProperty
     private String password;
 
     public DTOUser() {

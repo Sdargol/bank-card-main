@@ -1,12 +1,15 @@
 package org.sdargol.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.sdargol.dto.abstracts.ADTO;
 import org.sdargol.http.security.Roles;
 
 import java.util.Set;
 
 public class DTORoles extends ADTO {
+    @JsonProperty
     private Set<Roles> roles;
+    @JsonProperty
     private Integer userId;
 
     public DTORoles() {

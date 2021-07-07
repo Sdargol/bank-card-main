@@ -6,14 +6,14 @@ public class DTORefill {
     @JsonProperty
     private Integer money;
     @JsonProperty
-    private Integer id;
+    private Long number;
 
     public DTORefill() {
     }
 
-    public DTORefill(Integer money, Integer id) {
+    public DTORefill(Integer money, Long number) {
         this.money = money;
-        this.id = id;
+        this.number = number;
     }
 
     public Integer getMoney() {
@@ -25,11 +25,19 @@ public class DTORefill {
     }
 
 
-    public Integer getId() {
-        return id;
+    public Long getNumber() {
+        return number;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setNumber(Long number) {
+        this.number = number;
+    }
+
+    @Override
+    public String toString() {
+        return "DTORefill{" +
+                "money=" + money +
+                ", number=" + number +
+                '}';
     }
 }

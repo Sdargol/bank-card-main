@@ -6,7 +6,11 @@ import org.sdargol.controllers.core.ControllerManager;
 import org.sdargol.controllers.core.IController;
 import org.sdargol.controllers.core.request.BaseRequestEntity;
 import org.sdargol.controllers.core.request.RequestEntity;
+import org.sdargol.controllers.core.response.Response;
+import org.sdargol.controllers.core.response.ResponseEntity;
 import org.sdargol.controllers.method.HTTPMethod;
+import org.sdargol.http.security.Context;
+import org.sdargol.http.security.SecurityEngine;
 import org.sdargol.utils.Log;
 
 import java.lang.reflect.InvocationTargetException;
@@ -31,17 +35,25 @@ public class URLParser {
     }
 
     //public void parse(String url, HTTPMethod httpMethod) {
-    public void run(HttpExchange exchange) {
+    public ResponseEntity run(HttpExchange exchange) {
         LOGGER.info("[START PARSE URL]: " + Thread.currentThread().getName());
         String url = exchange.getRequestURI().getPath();
         HTTPMethod httpMethod = parseHTTPMethod(exchange.getRequestMethod());
+
+        if(httpMethod == null){
+            return Response.ok("{\"status\": \"ok\"}");
+        }
 
         IController controller = CONTROLLER_MANAGER.getController(url);
 
         Class<? extends IController> clss = controller.getClass();
         Method[] methods = clss.getDeclaredMethods();
 
-        String response = null;
+        SecurityEngine securityEngine = new SecurityEngine();
+
+        System.out.println("Check roles: " + securityEngine.checkRoles(clss, Context.getContext().get().getSecond()));
+
+        ResponseEntity response = null;
 
         //Если совпадает url и httpMethod
         for (Method method : methods) {
@@ -49,7 +61,7 @@ public class URLParser {
                 Mapping mapping = method.getDeclaredAnnotation(Mapping.class);
                 if (mapping.url().equals(url) && mapping.httpMethod().equals(httpMethod)) {
                     try {
-                        response = (String) method.invoke(controller, new BaseRequestEntity(exchange));
+                        response = (ResponseEntity) method.invoke(controller, new BaseRequestEntity(exchange));
                     } catch (IllegalAccessException | InvocationTargetException e) {
                         e.printStackTrace();
                     }
@@ -59,8 +71,8 @@ public class URLParser {
         }
 
         if (response != null) {
-            LOGGER.info("[RESPONSE]: " + response);
-            return;
+            LOGGER.info("[RESPONSE]: " + response.getJson());
+            return response;
         }
 
         LOGGER.info("[NEXT SEARCH]: " + Thread.currentThread().getName());
@@ -71,7 +83,7 @@ public class URLParser {
                 if(check(url, mapping.url()) && mapping.httpMethod().equals(httpMethod)){
                     System.out.println("Ура, мы нашли подходящий метод: " + method.getName());
                     try {
-                        response = (String) method.invoke(controller, new RequestEntity(exchange, parseUrlVariable(url,mapping.url())));
+                        response = (ResponseEntity) method.invoke(controller, new RequestEntity(exchange, parseUrlVariable(url,mapping.url())));
                     } catch (IllegalAccessException | InvocationTargetException e) {
                         e.printStackTrace();
                     }
@@ -81,7 +93,9 @@ public class URLParser {
         }
 
         LOGGER.info("[RESPONSE AFTER FULL SEARCH]: " +
-                response + " " + Thread.currentThread().getName());
+                response.getJson() + " " + Thread.currentThread().getName());
+
+        return response;
     }
 
     private boolean check(String urlRequest, String urlMethod){

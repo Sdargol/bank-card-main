@@ -8,6 +8,7 @@ import java.io.Serializable;
 
 public class Converter <T extends Serializable> implements IConverter<T> {
 
+    @Deprecated
     public String toJSON(T dto){
         ObjectMapper mapper = new ObjectMapper();
         String json= "{}";
@@ -21,6 +22,7 @@ public class Converter <T extends Serializable> implements IConverter<T> {
         return json;
     }
 
+    @Deprecated
     public T toJavaObject(String json, Class<T> cls){
         ObjectMapper mapper = new ObjectMapper();
 

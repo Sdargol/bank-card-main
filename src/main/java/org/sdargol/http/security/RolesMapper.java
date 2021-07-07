@@ -7,6 +7,8 @@ public class RolesMapper {
         switch (role){
             case "ADMIN": r = Roles.ADMIN;
                     break;
+            case "MODERATOR": r = Roles.MODERATOR;
+                break;
         }
 
         return r;

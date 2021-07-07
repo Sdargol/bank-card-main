@@ -4,8 +4,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import org.sdargol.dto.abstracts.ADTO;
 
 public class DTOCard extends ADTO {
-    @JsonProperty("number")
+    @JsonProperty()
     private Long number;
+    @JsonProperty
     private boolean status;
 
     public DTOCard() {

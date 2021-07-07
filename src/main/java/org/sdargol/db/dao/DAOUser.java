@@ -59,7 +59,7 @@ public class DAOUser implements IDAOUser {
             connection.commit();
         } catch (SQLException e) {
             msg = new DTOMessage(e.getMessage());
-            LOGGER.log(Level.WARNING, "Error create card", e);
+            LOGGER.log(Level.WARNING, "Error create user", e);
         }
         return msg;
     }
@@ -106,11 +106,14 @@ public class DAOUser implements IDAOUser {
         } catch (SQLException e) {
             LOGGER.log(Level.WARNING, "Error get users", e);
         }
-        return users.stream().findFirst().orElse(new DTOUser());
+        return users.stream()
+                .findFirst()
+                .orElse(new DTOUser());
     }
 
     @Override
     public DTOMessage addMoney(DTORefill refill) {
+        System.out.println("DAOUser add money");
         return null;
     }
 }

@@ -2,9 +2,7 @@ package org.sdargol.db.dao;
 
 import org.sdargol.db.dao.api.IDAOTransaction;
 import org.sdargol.db.h2.ConnectionPool;
-import org.sdargol.dto.DTOAccount;
 import org.sdargol.dto.DTOTransaction;
-import org.sdargol.dto.DTOUser;
 import org.sdargol.dto.response.DTOMessage;
 import org.sdargol.utils.Log;
 
@@ -26,15 +24,15 @@ public class DAOTransaction implements IDAOTransaction {
         try(Connection connection = ConnectionPool.getConnection()) {
             String sql = "INSERT INTO transactions (from_user_id, to_user_id, counts, status) VALUES (?,?,?,?)";
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setInt(1, transaction.getFromUserId());
-            ps.setInt(2, transaction.getToUserId());
+            ps.setInt(1, transaction.getFromAccountId());
+            ps.setInt(2, transaction.getToAccountId());
             ps.setInt(3, transaction.getCount());
             ps.setBoolean(4, false);
             ps.execute();
 
             msg = new DTOMessage(String.format("Transaction successfully created from = %d, to = %d, count = %d, status = %b",
-                    transaction.getFromUserId(),
-                    transaction.getToUserId(),
+                    transaction.getFromAccountId(),
+                    transaction.getToAccountId(),
                     transaction.getCount(),
                     transaction.isStatus()
             ));
@@ -77,8 +75,8 @@ public class DAOTransaction implements IDAOTransaction {
 
             while (rs.next()) {
                 users.add(new DTOTransaction(rs.getInt("id"),
-                        rs.getInt("from_user_id"),
-                        rs.getInt("to_user_id"),
+                        rs.getInt("from_account_id"),
+                        rs.getInt("to_account_id"),
                         rs.getInt("counts"),
                         rs.getBoolean("status")
                 ));

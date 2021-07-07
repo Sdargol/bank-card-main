@@ -5,6 +5,6 @@ import org.sdargol.dto.DTOUser;
 import org.sdargol.dto.response.DTOMessage;
 
 public interface IDAORoles {
-    DTORoles getRolesByUserId(int id);
-    DTOMessage addRolesForUser(DTORoles roles);
+    DTORoles getByUserId(int id);
+    DTOMessage add(DTORoles roles);
 }

@@ -25,7 +25,7 @@ public class Server {
     private static final String HOST = "localhost";
     private static final int PORT = 8080;
 
-    private final ExecutorService executorService = Executors.newFixedThreadPool(7);
+    private final ExecutorService executorService = Executors.newFixedThreadPool(3);
 
     public void start(){
         String address = HOST + ":" + PORT;
@@ -34,9 +34,9 @@ public class Server {
                     new InetSocketAddress(HOST, PORT), 0);
 
             Set<Filter> filters = new LinkedHashSet<>(Arrays.asList(
-                    new FilterJWT(),
                     new FilterCORS(),
-                    new FilterJSON()
+                    new FilterJSON(),
+                    new FilterJWT()
             ));
 
             boolean bContext = httpServer.createContext("/", new EntryPoint())

@@ -1,8 +1,13 @@
 package org.sdargol.dto.request;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class DTOTransfer {
+    @JsonProperty
     private Integer from;
+    @JsonProperty
     private Integer to;
+    @JsonProperty
     private Integer count;
 
     public DTOTransfer() {
