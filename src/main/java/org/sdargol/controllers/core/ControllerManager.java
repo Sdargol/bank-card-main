@@ -2,6 +2,7 @@ package org.sdargol.controllers.core;
 
 import org.reflections.Reflections;
 import org.sdargol.controllers.annotation.RestController;
+import org.sdargol.controllers.core.api.IController;
 import org.sdargol.utils.Log;
 
 import java.lang.reflect.InvocationTargetException;
@@ -10,7 +11,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class ControllerManager {
+public final class ControllerManager {
     private final Map<String, IController> storageControllers;
     private final Set<String> urls;
 
@@ -21,7 +22,7 @@ public class ControllerManager {
         urls = new HashSet<>();
     }
 
-    public boolean init(){
+    public final boolean init(){
         Reflections reflections = new Reflections("org.sdargol.controllers");
         Set<Class<? extends IController>> controllerClasses = reflections.getSubTypesOf(IController.class);
 
@@ -46,12 +47,16 @@ public class ControllerManager {
         return status.get();
     }
 
-    public IController getController(final String requestUrl){
+    public final IController getController(final String requestUrl){
         String url = urls.stream()
                 .filter(requestUrl::contains)
                 .findFirst()
                 .orElse(Const.DEFAULT_URL);
 
         return storageControllers.get(url);
+    }
+
+    public final boolean contains(final String requestUrl){
+        return urls.stream().anyMatch(requestUrl::contains);
     }
 }

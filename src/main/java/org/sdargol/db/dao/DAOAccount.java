@@ -132,6 +132,12 @@ public class DAOAccount implements IDAOAccount {
 
             ps.close();
             c.commit();
+
+            msg.setMsg("Transaction for transfer from: " +
+                    fromAccountNumber +
+                    " to " +
+                    toAccountNumber +
+                    " successfully created. Count: " + transfer.getCount());
         } catch (SQLException e) {
             e.printStackTrace();
         }

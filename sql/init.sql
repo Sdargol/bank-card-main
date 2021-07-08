@@ -35,7 +35,7 @@ card_id INT NOT NULL,
 FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,
 FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);
 
-INSERT INTO cards (status) VALUES (TRUE), (TRUE), (TRUE);
+INSERT INTO cards (status) VALUES (FALSE), (TRUE), (TRUE);
 INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');
 INSERT INTO accounts (money) VALUES (10000), (250000);
 INSERT INTO transactions (from_account_id, to_account_id, counts, status) VALUES (1,2,5000,FALSE);

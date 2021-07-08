@@ -4,9 +4,11 @@ import org.sdargol.db.dao.api.IDAOCard;
 import org.sdargol.db.h2.ConnectionPool;
 import org.sdargol.dto.DTOAccount;
 import org.sdargol.dto.DTOCard;
+import org.sdargol.dto.request.DTOConfirm;
 import org.sdargol.dto.request.DTORefill;
 import org.sdargol.dto.response.DTOMessage;
 import org.sdargol.utils.Log;
+import sun.security.provider.SHA;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -180,5 +182,24 @@ public class DAOCard implements IDAOCard {
             LOGGER.log(Level.WARNING, "Error get cards", e);
         }
         return account;
+    }
+
+    @Override
+    public DTOMessage confirm(DTOConfirm confirm) {
+        DTOMessage msg = new DTOMessage();
+
+        try (Connection connection = ConnectionPool.getConnection()) {
+            String sql = "UPDATE cards SET status = TRUE WHERE id = (?)";
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setInt(1, confirm.getNumber());
+            ps.execute();
+            ps.close();
+
+            msg.setMsg("Card with id = " + confirm.getNumber() + " successfully confirm");
+
+        } catch (SQLException e) {
+            LOGGER.log(Level.WARNING, "Error get cards", e);
+        }
+        return msg;
     }
 }

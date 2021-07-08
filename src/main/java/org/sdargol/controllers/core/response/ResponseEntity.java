@@ -1,12 +1,14 @@
 package org.sdargol.controllers.core.response;
 
-public class ResponseEntity {
-    private final int status;
-    private final String json;
+import org.sdargol.json.JSONConverter;
 
-    public ResponseEntity(int status, String json) {
+public final class ResponseEntity<T> {
+    private final int status;
+    private final T obj;
+
+    public ResponseEntity(int status, T obj) {
         this.status = status;
-        this.json = json;
+        this.obj = obj;
     }
 
     public int getStatus() {
@@ -14,6 +16,6 @@ public class ResponseEntity {
     }
 
     public String getJson() {
-        return json;
+        return JSONConverter.toJSON(obj);
     }
 }

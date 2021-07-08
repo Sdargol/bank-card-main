@@ -8,6 +8,7 @@ import org.sdargol.http.filters.FilterJWT;
 import org.sdargol.http.handlers.Auth;
 import org.sdargol.http.handlers.EntryPoint;
 import org.sdargol.utils.Log;
+import org.sdargol.utils.Props;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -22,8 +23,8 @@ import java.util.logging.Logger;
 public class Server {
     private static final Logger LOGGER = Log.getLogger(Server.class.getName());
 
-    private static final String HOST = "localhost";
-    private static final int PORT = 8080;
+    private static final String HOST = Props.getProperty("server.location");
+    private static final int PORT = Props.getPropertyInt("server.port");
 
     private final ExecutorService executorService = Executors.newFixedThreadPool(3);
 

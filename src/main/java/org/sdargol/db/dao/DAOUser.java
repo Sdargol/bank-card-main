@@ -1,9 +1,11 @@
 package org.sdargol.db.dao;
 
+import org.sdargol.db.dao.api.IDAOAccount;
 import org.sdargol.db.dao.api.IDAOUser;
 import org.sdargol.db.h2.ConnectionPool;
 import org.sdargol.dto.DTOUser;
-import org.sdargol.dto.request.DTORefill;
+import org.sdargol.dto.request.DTOTransfer;
+import org.sdargol.dto.request.DTOUserTransfer;
 import org.sdargol.dto.response.DTOMessage;
 import org.sdargol.utils.Log;
 
@@ -112,8 +114,34 @@ public class DAOUser implements IDAOUser {
     }
 
     @Override
-    public DTOMessage addMoney(DTORefill refill) {
-        System.out.println("DAOUser add money");
-        return null;
+    public DTOMessage transferMoney(DTOUserTransfer transfer) {
+        DTOMessage msg = new DTOMessage("DAOUser transferMoney");
+        int fromId = 0;
+        int toId = 0;
+        try(Connection connection = ConnectionPool.getConnection()){
+            String sql = "SELECT * FROM users WHERE login = (?)";
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1,transfer.getLoginFrom());
+            ResultSet rs = ps.executeQuery();
+
+            rs.next();
+            fromId = rs.getInt("id");
+            rs.close();
+
+            ps.setString(1,transfer.getLoginTo());
+            rs = ps.executeQuery();
+
+            rs.next();
+            toId = rs.getInt("id");
+            rs.close();
+            ps.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        DTOTransfer tr = new DTOTransfer(fromId,toId,transfer.getCount());
+
+        IDAOAccount account = new DAOAccount();
+        msg = account.transferMoney(tr);
+        return msg;
     }
 }

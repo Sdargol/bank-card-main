@@ -3,14 +3,14 @@ package org.sdargol.http.url;
 import com.sun.net.httpserver.HttpExchange;
 import org.sdargol.controllers.annotation.Mapping;
 import org.sdargol.controllers.core.ControllerManager;
-import org.sdargol.controllers.core.IController;
+import org.sdargol.controllers.core.api.IController;
+import org.sdargol.controllers.core.SControllerManager;
 import org.sdargol.controllers.core.request.BaseRequestEntity;
 import org.sdargol.controllers.core.request.RequestEntity;
 import org.sdargol.controllers.core.response.Response;
 import org.sdargol.controllers.core.response.ResponseEntity;
 import org.sdargol.controllers.method.HTTPMethod;
-import org.sdargol.http.security.Context;
-import org.sdargol.http.security.SecurityEngine;
+import org.sdargol.dto.response.DTOMessage;
 import org.sdargol.utils.Log;
 
 import java.lang.reflect.InvocationTargetException;
@@ -20,40 +20,25 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 public class URLParser {
-    private static final Logger LOGGER = Log.getLogger(URLParser.class.getName());
-    private static final ControllerManager CONTROLLER_MANAGER;
-
-    static {
-        CONTROLLER_MANAGER = new ControllerManager();
-        boolean bInit = CONTROLLER_MANAGER.init();
-
-        if(bInit){
-            LOGGER.info("ControllerManager success load");
-        }else{
-            LOGGER.info("ControllerManager error load");
-        }
-    }
+    private final static Logger LOGGER = Log.getLogger(URLParser.class.getName());
+    private final static ControllerManager CONTROLLER_MANAGER = SControllerManager.getInstance();
+    private final static ResponseEntity<DTOMessage> baseResponse = Response.ok(new DTOMessage("ok"));
 
     //public void parse(String url, HTTPMethod httpMethod) {
-    public ResponseEntity run(HttpExchange exchange) {
+    public <T> ResponseEntity<T> run(HttpExchange exchange) {
         LOGGER.info("[START PARSE URL]: " + Thread.currentThread().getName());
         String url = exchange.getRequestURI().getPath();
         HTTPMethod httpMethod = parseHTTPMethod(exchange.getRequestMethod());
 
         if(httpMethod == null){
-            return Response.ok("{\"status\": \"ok\"}");
+            return (ResponseEntity<T>) baseResponse;
         }
 
         IController controller = CONTROLLER_MANAGER.getController(url);
-
         Class<? extends IController> clss = controller.getClass();
         Method[] methods = clss.getDeclaredMethods();
 
-        SecurityEngine securityEngine = new SecurityEngine();
-
-        System.out.println("Check roles: " + securityEngine.checkRoles(clss, Context.getContext().get().getSecond()));
-
-        ResponseEntity response = null;
+        ResponseEntity<T> response = null;
 
         //Если совпадает url и httpMethod
         for (Method method : methods) {
@@ -61,7 +46,8 @@ public class URLParser {
                 Mapping mapping = method.getDeclaredAnnotation(Mapping.class);
                 if (mapping.url().equals(url) && mapping.httpMethod().equals(httpMethod)) {
                     try {
-                        response = (ResponseEntity) method.invoke(controller, new BaseRequestEntity(exchange));
+                        response = (ResponseEntity<T>) method.invoke(controller,
+                                new BaseRequestEntity(exchange));
                     } catch (IllegalAccessException | InvocationTargetException e) {
                         e.printStackTrace();
                     }
@@ -83,7 +69,10 @@ public class URLParser {
                 if(check(url, mapping.url()) && mapping.httpMethod().equals(httpMethod)){
                     System.out.println("Ура, мы нашли подходящий метод: " + method.getName());
                     try {
-                        response = (ResponseEntity) method.invoke(controller, new RequestEntity(exchange, parseUrlVariable(url,mapping.url())));
+                        response = (ResponseEntity<T>) method.invoke(controller,
+                                new RequestEntity(exchange, parseUrlVariable(url,mapping.url())
+                                )
+                        );
                     } catch (IllegalAccessException | InvocationTargetException e) {
                         e.printStackTrace();
                     }
@@ -91,6 +80,8 @@ public class URLParser {
                 }
             }
         }
+
+        if(response == null) response = (ResponseEntity<T>) baseResponse;
 
         LOGGER.info("[RESPONSE AFTER FULL SEARCH]: " +
                 response.getJson() + " " + Thread.currentThread().getName());

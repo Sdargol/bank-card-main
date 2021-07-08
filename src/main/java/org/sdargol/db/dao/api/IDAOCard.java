@@ -2,6 +2,7 @@ package org.sdargol.db.dao.api;
 
 import org.sdargol.dto.DTOAccount;
 import org.sdargol.dto.DTOCard;
+import org.sdargol.dto.request.DTOConfirm;
 import org.sdargol.dto.request.DTORefill;
 import org.sdargol.dto.response.DTOMessage;
 
@@ -12,4 +13,5 @@ public interface IDAOCard {
     List<DTOCard> getAll();
     DTOAccount addMoney(DTORefill req);
     DTOAccount getBalance(Long cardNumber);
+    DTOMessage confirm(DTOConfirm confirm);
 }
