@@ -29,13 +29,6 @@ public class Main {
             e.printStackTrace();
         }
 
-        //IDAOUser u = new DAOUser();
-        //DTOUser user = new DTOUser(0,"dimon@gmail.com", "password123");
-        //u.create(user);
-
-        //IDAOAccount acc = new DAOAccount();
-        //DTOTransfer tr = new DTOTransfer(777,778,11);
-
         Server server = new Server();
         server.start();
     }

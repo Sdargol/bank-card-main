@@ -2,6 +2,8 @@ package org.sdargol.db.dao;
 
 import org.sdargol.db.dao.api.IDAOAccount;
 import org.sdargol.db.dao.api.IDAOUser;
+import org.sdargol.db.dao.core.IDAO;
+import org.sdargol.db.dao.core.SManagerDAO;
 import org.sdargol.db.h2.ConnectionPool;
 import org.sdargol.dto.DTOUser;
 import org.sdargol.dto.request.DTOTransfer;
@@ -15,7 +17,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class DAOUser implements IDAOUser {
+public class DAOUser implements IDAOUser, IDAO {
     private final static Logger LOGGER = Log.getLogger(DAOUser.class.getName());
 
     @Override
@@ -140,7 +142,8 @@ public class DAOUser implements IDAOUser {
         }
         DTOTransfer tr = new DTOTransfer(fromId,toId,transfer.getCount());
 
-        IDAOAccount account = new DAOAccount();
+        //IDAOAccount account = new DAOAccount();
+        IDAOAccount account = SManagerDAO.getInstance().get(DAOAccount.class);
         msg = account.transferMoney(tr);
         return msg;
     }

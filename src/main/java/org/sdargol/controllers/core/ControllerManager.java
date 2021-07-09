@@ -4,6 +4,7 @@ import org.reflections.Reflections;
 import org.sdargol.controllers.annotation.RestController;
 import org.sdargol.controllers.core.api.IController;
 import org.sdargol.utils.Log;
+import org.sdargol.utils.Props;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
@@ -51,7 +52,7 @@ public final class ControllerManager {
         String url = urls.stream()
                 .filter(requestUrl::contains)
                 .findFirst()
-                .orElse(Const.DEFAULT_URL);
+                .orElse(Props.getProperty("controller.default"));
 
         return storageControllers.get(url);
     }

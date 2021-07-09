@@ -42,4 +42,13 @@ public class DTOTransfer {
     public void setCount(Integer count) {
         this.count = count;
     }
+
+    @Override
+    public String toString() {
+        return "DTOTransfer{" +
+                "from=" + from +
+                ", to=" + to +
+                ", count=" + count +
+                '}';
+    }
 }

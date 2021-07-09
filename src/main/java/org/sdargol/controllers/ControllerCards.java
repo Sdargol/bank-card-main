@@ -10,12 +10,14 @@ import org.sdargol.controllers.core.response.ResponseEntity;
 import org.sdargol.controllers.method.HTTPMethod;
 import org.sdargol.db.dao.DAOCard;
 import org.sdargol.db.dao.api.IDAOCard;
+import org.sdargol.db.dao.core.SManagerDAO;
 import org.sdargol.dto.DTOAccount;
 import org.sdargol.dto.DTOCard;
 import org.sdargol.dto.request.DTOCreateCard;
 import org.sdargol.dto.request.DTORefill;
 import org.sdargol.dto.response.DTOMessage;
 import org.sdargol.http.security.Context;
+import org.sdargol.http.security.Roles;
 import org.sdargol.http.security.annotation.Security;
 import org.sdargol.json.JSONConverter;
 
@@ -23,8 +25,8 @@ import java.util.List;
 
 @RestController(url = "/api/v1/cards")
 @Security()
-public class CardController implements IController {
-    private final static IDAOCard card = new DAOCard();
+public class ControllerCards implements IController {
+    private final IDAOCard card = SManagerDAO.getInstance().get(DAOCard.class);
 
     @Mapping(url = "/api/v1/cards", httpMethod = HTTPMethod.POST)
     public ResponseEntity<DTOMessage> createCard(BaseRequestEntity req){

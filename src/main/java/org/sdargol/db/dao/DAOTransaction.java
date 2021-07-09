@@ -1,8 +1,10 @@
 package org.sdargol.db.dao;
 
 import org.sdargol.db.dao.api.IDAOTransaction;
+import org.sdargol.db.dao.core.IDAO;
 import org.sdargol.db.h2.ConnectionPool;
 import org.sdargol.dto.DTOTransaction;
+import org.sdargol.dto.request.DTOConfirm;
 import org.sdargol.dto.response.DTOMessage;
 import org.sdargol.utils.Log;
 
@@ -15,7 +17,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class DAOTransaction implements IDAOTransaction {
+public class DAOTransaction implements IDAOTransaction, IDAO {
     private final static Logger LOGGER = Log.getLogger(DAOTransaction.class.getName());
 
     @Override
@@ -45,19 +47,95 @@ public class DAOTransaction implements IDAOTransaction {
         return msg;
     }
 
-    @Override
-    public DTOMessage confirm(int id) {
+    /*@Override
+    public DTOMessage confirm(DTOConfirm confirm) {
         DTOMessage msg;
         try (Connection connection = ConnectionPool.getConnection()) {
             String sql = "UPDATE transactions SET status = (?) WHERE id = (?)";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setBoolean(1, true);
-            ps.setInt(2,id);
+            ps.setInt(2,confirm.getNumber());
             int row = ps.executeUpdate();
 
-            msg = new DTOMessage("Transaction with id = "+ id +" successfully confirm, row = " + row);
+            msg = new DTOMessage("Transaction with id = "+ confirm.getNumber() +" successfully confirm, row = " + row);
 
             ps.close();
+        } catch (SQLException e) {
+            msg = new DTOMessage(e.getMessage());
+            LOGGER.log(Level.WARNING, "Error confirm transaction", e);
+        }
+        return msg;
+    }*/
+
+    @Override
+    public DTOMessage confirm(DTOConfirm confirm) {
+        DTOMessage msg;
+        try (Connection connection = ConnectionPool.getConnection()) {
+            connection.setAutoCommit(false);
+            String sql = "SELECT * FROM transactions WHERE id = (?)";
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setInt(1, confirm.getNumber());
+            ResultSet rs = ps.executeQuery();
+
+            rs.next();
+            DTOTransaction transaction = new DTOTransaction();
+            transaction.setId(confirm.getNumber());
+            transaction.setFromAccountId(rs.getInt("from_account_id"));
+            transaction.setToAccountId(rs.getInt("to_account_id"));
+            transaction.setCount(rs.getInt("counts"));
+            transaction.setStatus(rs.getBoolean("status"));
+            rs.close();
+
+            // взять деньги у from
+            sql = "SELECT * FROM accounts WHERE id = (?)";
+            ps = connection.prepareStatement(sql);
+            ps.setInt(1, transaction.getFromAccountId());
+            rs = ps.executeQuery();
+
+            rs.next();
+            int fromMoney = rs.getInt("money");
+            rs.close();
+
+            // взять деньги у to
+            sql = "SELECT * FROM accounts WHERE id = (?)";
+            ps = connection.prepareStatement(sql);
+            ps.setInt(1, transaction.getToAccountId());
+            rs = ps.executeQuery();
+
+            rs.next();
+            int toMoney = rs.getInt("money");
+            rs.close();
+
+            // делаем перевод
+            fromMoney = fromMoney - transaction.getCount();
+            toMoney = toMoney + transaction.getCount();
+
+            // обновляем счета
+            sql = "UPDATE accounts SET money = (?) WHERE id = (?)";
+            ps = connection.prepareStatement(sql);
+            ps.setInt(1, fromMoney);
+            ps.setInt(2, transaction.getFromAccountId());
+            ps.executeUpdate();
+
+            sql = "UPDATE accounts SET money = (?) WHERE id = (?)";
+            ps = connection.prepareStatement(sql);
+            ps.setInt(1, toMoney);
+            ps.setInt(2, transaction.getToAccountId());
+            ps.executeUpdate();
+
+            // подтверждаем транзакцию
+            sql = "UPDATE transactions SET status = (?) WHERE id = (?)";
+            ps = connection.prepareStatement(sql);
+            ps.setBoolean(1, true);
+            ps.setInt(2, confirm.getNumber());
+            int row = ps.executeUpdate();
+
+            //System.out.println(transaction);
+
+            msg = new DTOMessage("Transaction with id = "+ confirm.getNumber() +" successfully confirm, row = " + row);
+
+            ps.close();
+            connection.commit();
         } catch (SQLException e) {
             msg = new DTOMessage(e.getMessage());
             LOGGER.log(Level.WARNING, "Error confirm transaction", e);

@@ -39,7 +39,7 @@ INSERT INTO cards (status) VALUES (FALSE), (TRUE), (TRUE);
 INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');
 INSERT INTO accounts (money) VALUES (10000), (250000);
 INSERT INTO transactions (from_account_id, to_account_id, counts, status) VALUES (1,2,5000,FALSE);
-INSERT INTO roles (user_id, role) VALUES (777,'USER'),(777,'ADMIN'), (778,'USER'), (778,'ADMIN');
+INSERT INTO roles (user_id, role) VALUES (777,'USER'),(777,'ADMIN'), (778,'USER');
 INSERT INTO AccountToUser (account_id, user_id) VALUES (1,777), (2,778);
 INSERT INTO CardsToAccount (account_id, card_id) VALUES (1,1), (2,2);
 

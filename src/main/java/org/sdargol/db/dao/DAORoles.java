@@ -1,6 +1,7 @@
 package org.sdargol.db.dao;
 
 import org.sdargol.db.dao.api.IDAORoles;
+import org.sdargol.db.dao.core.IDAO;
 import org.sdargol.db.h2.ConnectionPool;
 import org.sdargol.dto.DTORoles;
 import org.sdargol.dto.response.DTOMessage;
@@ -17,7 +18,7 @@ import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class DAORoles implements IDAORoles {
+public class DAORoles implements IDAORoles, IDAO {
     private final static Logger LOGGER = Log.getLogger(DAORoles.class.getName());
 
     @Override

@@ -1,6 +1,5 @@
 package org.sdargol.http.handlers;
 
-
 import com.sun.net.httpserver.HttpExchange;
 import org.sdargol.controllers.core.response.ResponseEntity;
 import org.sdargol.utils.Log;

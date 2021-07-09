@@ -53,11 +53,13 @@ public class Server {
                     new FilterJSON()
             ));
 
-            httpServer.createContext("/auth", new Auth())
+            boolean bAuth = httpServer.createContext("/auth", new Auth())
                     .getFilters()
                     .addAll(authFilters);
 
-            //httpServer.createContext("/", new TestHandler());
+            if(bAuth){
+                LOGGER.info("Context \"Auth\" created");
+            }
 
             httpServer.setExecutor(executorService);
             httpServer.start();

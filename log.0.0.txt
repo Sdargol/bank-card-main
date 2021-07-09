@@ -1,438 +1,1232 @@
-июл 08, 2021 5:48:52 PM org.sdargol.utils.FileLoader listToString
-INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT(777, 1) PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_account_id INT NOT NULL,to_account_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (to_account_id) REFERENCES accounts(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (FALSE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money) VALUES (10000), (250000);INSERT INTO transactions (from_account_id, to_account_id, counts, status) VALUES (1,2,5000,FALSE);INSERT INTO roles (user_id, role) VALUES (777,'USER'),(777,'ADMIN'), (778,'USER'), (778,'ADMIN');INSERT INTO AccountToUser (account_id, user_id) VALUES (1,777), (2,778);INSERT INTO CardsToAccount (account_id, card_id) VALUES (1,1), (2,2);
-июл 08, 2021 5:48:52 PM org.sdargol.db.h2.ConnectionPool <clinit>
+июл 09, 2021 1:49:51 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT(777, 1) PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_account_id INT NOT NULL,to_account_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (to_account_id) REFERENCES accounts(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (FALSE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money) VALUES (10000), (250000);INSERT INTO transactions (from_account_id, to_account_id, counts, status) VALUES (1,2,5000,FALSE);INSERT INTO roles (user_id, role) VALUES (777,'USER'),(777,'ADMIN'), (778,'USER');INSERT INTO AccountToUser (account_id, user_id) VALUES (1,777), (2,778);INSERT INTO CardsToAccount (account_id, card_id) VALUES (1,1), (2,2);
+июл 09, 2021 1:49:51 PM org.sdargol.db.h2.ConnectionPool <clinit>
 INFO: Success load: org.h2.Driver
-июл 08, 2021 5:48:52 PM org.sdargol.db.h2.ConnectionPool <clinit>
+июл 09, 2021 1:49:51 PM org.sdargol.db.h2.ConnectionPool <clinit>
 INFO: Create JdbcConnectionPool, max connections: 10
-июл 08, 2021 5:48:52 PM org.sdargol.utils.Props <clinit>
+июл 09, 2021 1:49:51 PM org.sdargol.utils.Props <clinit>
 INFO: Props success load
-июл 08, 2021 5:48:52 PM org.sdargol.controllers.core.SControllerManager <clinit>
+июл 09, 2021 1:49:52 PM org.sdargol.db.dao.core.SManagerDAO <clinit>
+INFO: SManagerDAO success load
+июл 09, 2021 1:49:52 PM org.sdargol.controllers.core.SControllerManager <clinit>
 INFO: SControllerManager success load
-июл 08, 2021 5:48:52 PM org.sdargol.http.server.Server start
+июл 09, 2021 1:49:52 PM org.sdargol.http.server.Server start
 INFO: Context " \ " created
-июл 08, 2021 5:48:52 PM org.sdargol.http.server.Server start
+июл 09, 2021 1:49:52 PM org.sdargol.http.server.Server start
+INFO: Context "Auth" created
+июл 09, 2021 1:49:52 PM org.sdargol.http.server.Server start
 INFO: Server success started on localhost:8080
-июл 08, 2021 5:48:55 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 1:49:58 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:48:55 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 1:49:58 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:48:55 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 1:49:58 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:48:55 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 1:49:58 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-1
-июл 08, 2021 5:48:55 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 1:49:58 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:48:55 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 1:49:58 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:48:55 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 1:49:58 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:48:55 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: Hello admin@gmail.com
-июл 08, 2021 5:48:55 PM org.sdargol.http.url.URLParser run
-INFO: [START PARSE URL]: pool-1-thread-2
-июл 08, 2021 5:48:55 PM org.sdargol.http.url.URLParser run
-INFO: [NEXT SEARCH]: pool-1-thread-2
-июл 08, 2021 5:48:55 PM org.sdargol.http.url.URLParser run
-INFO: [RESPONSE AFTER FULL SEARCH]: {"number":1,"money":10000,"id":1} pool-1-thread-2
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 1:49:58 PM org.sdargol.json.jwt.JWTProvider validateToken
+WARNING: Error validate token
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-07-09T09:33:32Z. Current time: 2021-07-09T13:49:58Z, a difference of 15386411 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at org.sdargol.json.jwt.JWTProvider.validateToken(JWTProvider.java:30)
+	at org.sdargol.http.filters.FilterJWT.doFilter(FilterJWT.java:60)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterJSON.doFilter(FilterJSON.java:18)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterCORS.doFilter(FilterCORS.java:22)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:647)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+июл 09, 2021 1:49:59 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 1:49:59 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 1:49:59 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 1:49:59 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-3
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 1:49:59 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 1:49:59 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 1:49:59 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: Hello admin@gmail.com
-июл 08, 2021 5:48:57 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 1:49:59 PM org.sdargol.json.jwt.JWTProvider validateToken
+WARNING: Error validate token
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-07-09T09:33:32Z. Current time: 2021-07-09T13:49:59Z, a difference of 15387724 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at org.sdargol.json.jwt.JWTProvider.validateToken(JWTProvider.java:30)
+	at org.sdargol.http.filters.FilterJWT.doFilter(FilterJWT.java:60)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterJSON.doFilter(FilterJSON.java:18)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterCORS.doFilter(FilterCORS.java:22)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:647)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+июл 09, 2021 1:50:00 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 1:50:00 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 1:50:00 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 1:50:00 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 09, 2021 1:50:00 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 1:50:00 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 1:50:00 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 1:50:00 PM org.sdargol.json.jwt.JWTProvider validateToken
+WARNING: Error validate token
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-07-09T09:33:32Z. Current time: 2021-07-09T13:50:00Z, a difference of 15388308 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at org.sdargol.json.jwt.JWTProvider.validateToken(JWTProvider.java:30)
+	at org.sdargol.http.filters.FilterJWT.doFilter(FilterJWT.java:60)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterJSON.doFilter(FilterJSON.java:18)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterCORS.doFilter(FilterCORS.java:22)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:647)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+июл 09, 2021 1:50:01 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 1:50:01 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 1:50:01 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 1:50:01 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-1
-июл 08, 2021 5:48:57 PM org.sdargol.http.url.URLParser run
-INFO: [RESPONSE]: {"number":1,"money":10100,"id":1}
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 1:50:01 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 1:50:01 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 1:50:01 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.url.URLParser run
-INFO: [START PARSE URL]: pool-1-thread-2
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 1:50:01 PM org.sdargol.json.jwt.JWTProvider validateToken
+WARNING: Error validate token
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-07-09T09:33:32Z. Current time: 2021-07-09T13:50:01Z, a difference of 15389178 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at org.sdargol.json.jwt.JWTProvider.validateToken(JWTProvider.java:30)
+	at org.sdargol.http.filters.FilterJWT.doFilter(FilterJWT.java:60)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterJSON.doFilter(FilterJSON.java:18)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterCORS.doFilter(FilterCORS.java:22)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:647)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+июл 09, 2021 1:50:01 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 1:50:01 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 1:50:01 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: Hello admin@gmail.com
-июл 08, 2021 5:48:57 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 1:50:01 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-3
-июл 08, 2021 5:48:57 PM org.sdargol.http.url.URLParser run
-INFO: [RESPONSE]: {"number":1,"money":10200,"id":1}
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 1:50:01 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 1:50:01 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 1:50:01 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 1:50:01 PM org.sdargol.json.jwt.JWTProvider validateToken
+WARNING: Error validate token
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-07-09T09:33:32Z. Current time: 2021-07-09T13:50:01Z, a difference of 15389795 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at org.sdargol.json.jwt.JWTProvider.validateToken(JWTProvider.java:30)
+	at org.sdargol.http.filters.FilterJWT.doFilter(FilterJWT.java:60)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterJSON.doFilter(FilterJSON.java:18)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterCORS.doFilter(FilterCORS.java:22)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:647)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+июл 09, 2021 1:50:03 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 1:50:03 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 1:50:03 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 1:50:03 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 09, 2021 1:50:03 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 1:50:03 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 1:50:03 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 1:50:03 PM org.sdargol.json.jwt.JWTProvider validateToken
+WARNING: Error validate token
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-07-09T09:33:32Z. Current time: 2021-07-09T13:50:03Z, a difference of 15391032 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at org.sdargol.json.jwt.JWTProvider.validateToken(JWTProvider.java:30)
+	at org.sdargol.http.filters.FilterJWT.doFilter(FilterJWT.java:60)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterJSON.doFilter(FilterJSON.java:18)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterCORS.doFilter(FilterCORS.java:22)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:647)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+июл 09, 2021 1:50:04 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 1:50:04 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 1:50:04 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 1:50:04 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-1
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 1:50:04 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 1:50:04 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 1:50:04 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: Hello admin@gmail.com
-июл 08, 2021 5:48:57 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 1:50:04 PM org.sdargol.json.jwt.JWTProvider validateToken
+WARNING: Error validate token
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-07-09T09:33:32Z. Current time: 2021-07-09T13:50:04Z, a difference of 15392056 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at org.sdargol.json.jwt.JWTProvider.validateToken(JWTProvider.java:30)
+	at org.sdargol.http.filters.FilterJWT.doFilter(FilterJWT.java:60)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterJSON.doFilter(FilterJSON.java:18)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterCORS.doFilter(FilterCORS.java:22)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:647)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+июл 09, 2021 1:50:09 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 1:50:09 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 1:50:09 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 1:50:09 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 1:50:09 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 1:50:32 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 1:50:32 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 1:50:32 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 1:50:32 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-2
-июл 08, 2021 5:48:57 PM org.sdargol.http.url.URLParser run
-INFO: [RESPONSE]: {"number":1,"money":10300,"id":1}
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 1:50:32 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 1:50:32 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 1:50:32 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 1:50:32 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 1:50:32 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-3
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterCORS doFilter
-INFO: CORS Filter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterJSON doFilter
-INFO: JSONFilter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: JWT Filter run
-июл 08, 2021 5:48:57 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: Hello admin@gmail.com
-июл 08, 2021 5:48:57 PM org.sdargol.http.url.URLParser run
-INFO: [START PARSE URL]: pool-1-thread-1
-июл 08, 2021 5:48:57 PM org.sdargol.http.url.URLParser run
-INFO: [RESPONSE]: {"number":1,"money":10400,"id":1}
-июл 08, 2021 5:48:58 PM org.sdargol.http.filters.FilterCORS doFilter
-INFO: CORS Filter run
-июл 08, 2021 5:48:58 PM org.sdargol.http.filters.FilterJSON doFilter
-INFO: JSONFilter run
-июл 08, 2021 5:48:58 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: JWT Filter run
-июл 08, 2021 5:48:58 PM org.sdargol.http.url.URLParser run
-INFO: [START PARSE URL]: pool-1-thread-2
-июл 08, 2021 5:48:58 PM org.sdargol.http.filters.FilterCORS doFilter
-INFO: CORS Filter run
-июл 08, 2021 5:48:58 PM org.sdargol.http.filters.FilterJSON doFilter
-INFO: JSONFilter run
-июл 08, 2021 5:48:58 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: JWT Filter run
-июл 08, 2021 5:48:58 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: Hello admin@gmail.com
-июл 08, 2021 5:48:58 PM org.sdargol.http.url.URLParser run
-INFO: [START PARSE URL]: pool-1-thread-3
-июл 08, 2021 5:48:58 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 1:50:32 PM org.sdargol.http.url.URLParser run
 INFO: [NEXT SEARCH]: pool-1-thread-3
-июл 08, 2021 5:48:58 PM org.sdargol.http.url.URLParser run
-INFO: [RESPONSE AFTER FULL SEARCH]: {"number":1,"money":10400,"id":1} pool-1-thread-3
-июл 08, 2021 5:48:59 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 1:50:32 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE AFTER FULL SEARCH]: {"number":1,"money":10000,"id":1} pool-1-thread-3
+июл 09, 2021 1:50:34 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:48:59 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 1:50:34 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:48:59 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 1:50:34 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:48:59 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 1:50:34 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-1
-июл 08, 2021 5:48:59 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 1:50:34 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:48:59 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 1:50:34 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:48:59 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 1:50:34 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:48:59 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: Hello admin@gmail.com
-июл 08, 2021 5:48:59 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 1:50:34 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 1:50:34 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-2
-июл 08, 2021 5:48:59 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 1:50:34 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: {"number":1,"money":10100,"id":1}
+июл 09, 2021 1:50:34 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 1:50:34 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 1:50:34 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 1:50:34 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 09, 2021 1:50:34 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 1:50:34 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 1:50:34 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 1:50:34 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 1:50:34 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 1:50:34 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: {"number":1,"money":10200,"id":1}
+июл 09, 2021 1:50:35 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 1:50:35 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 1:50:35 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 1:50:35 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 09, 2021 1:50:35 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 1:50:35 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 1:50:35 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 1:50:35 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 1:50:35 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 09, 2021 1:50:35 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: {"number":1,"money":10300,"id":1}
+июл 09, 2021 1:50:36 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 1:50:36 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 1:50:36 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 1:50:36 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 1:50:36 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 1:50:36 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 1:50:36 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 1:50:36 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 1:50:36 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 09, 2021 1:50:36 PM org.sdargol.http.url.URLParser run
+INFO: [NEXT SEARCH]: pool-1-thread-2
+июл 09, 2021 1:50:36 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE AFTER FULL SEARCH]: {"number":1,"money":10300,"id":1} pool-1-thread-2
+июл 09, 2021 1:50:36 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 1:50:36 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 1:50:36 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 1:50:36 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 09, 2021 1:50:36 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 1:50:36 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 1:50:36 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 1:50:36 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 1:50:37 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 1:50:37 PM org.sdargol.http.url.URLParser run
 INFO: [RESPONSE]: [{"number":1234123412341234,"status":false,"id":1},{"number":1234123412341235,"status":true,"id":2},{"number":1234123412341236,"status":true,"id":3}]
-июл 08, 2021 5:49:03 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 1:50:39 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:49:03 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 1:50:39 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:49:03 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 1:50:39 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:49:03 PM org.sdargol.http.url.URLParser run
-INFO: [START PARSE URL]: pool-1-thread-3
-июл 08, 2021 5:49:03 PM org.sdargol.http.filters.FilterCORS doFilter
-INFO: CORS Filter run
-июл 08, 2021 5:49:03 PM org.sdargol.http.filters.FilterJSON doFilter
-INFO: JSONFilter run
-июл 08, 2021 5:49:03 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: JWT Filter run
-июл 08, 2021 5:49:03 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: Hello admin@gmail.com
-июл 08, 2021 5:49:03 PM org.sdargol.http.url.URLParser run
-INFO: [START PARSE URL]: pool-1-thread-1
-июл 08, 2021 5:49:03 PM org.sdargol.http.url.URLParser run
-INFO: [RESPONSE]: {"msg":"Card successfully created"}
-июл 08, 2021 5:49:04 PM org.sdargol.http.filters.FilterCORS doFilter
-INFO: CORS Filter run
-июл 08, 2021 5:49:04 PM org.sdargol.http.filters.FilterJSON doFilter
-INFO: JSONFilter run
-июл 08, 2021 5:49:04 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: JWT Filter run
-июл 08, 2021 5:49:04 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 1:50:39 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-2
-июл 08, 2021 5:49:04 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 1:50:39 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:49:04 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 1:50:39 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:49:04 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 1:50:39 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:49:04 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: Hello admin@gmail.com
-июл 08, 2021 5:49:04 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 1:50:39 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 1:50:39 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-3
-июл 08, 2021 5:49:04 PM org.sdargol.http.url.URLParser run
-INFO: [RESPONSE]: {"msg":"Card successfully created"}
-июл 08, 2021 5:49:04 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 1:50:39 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: [{"number":1,"money":10300,"id":1},{"number":2,"money":250000,"id":2}]
+июл 09, 2021 1:50:50 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:49:04 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 1:50:50 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:49:04 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 1:50:50 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:49:04 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 1:50:50 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-1
-июл 08, 2021 5:49:04 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 1:50:50 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:49:04 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 1:50:50 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:49:04 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 1:50:50 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:49:04 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: Hello admin@gmail.com
-июл 08, 2021 5:49:04 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 1:50:50 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 1:50:50 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-2
-июл 08, 2021 5:49:04 PM org.sdargol.http.url.URLParser run
-INFO: [RESPONSE]: {"msg":"Card successfully created"}
-июл 08, 2021 5:49:04 PM org.sdargol.http.filters.FilterCORS doFilter
-INFO: CORS Filter run
-июл 08, 2021 5:49:04 PM org.sdargol.http.filters.FilterJSON doFilter
-INFO: JSONFilter run
-июл 08, 2021 5:49:04 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: JWT Filter run
-июл 08, 2021 5:49:04 PM org.sdargol.http.url.URLParser run
-INFO: [START PARSE URL]: pool-1-thread-3
-июл 08, 2021 5:49:04 PM org.sdargol.http.filters.FilterCORS doFilter
-INFO: CORS Filter run
-июл 08, 2021 5:49:04 PM org.sdargol.http.filters.FilterJSON doFilter
-INFO: JSONFilter run
-июл 08, 2021 5:49:04 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: JWT Filter run
-июл 08, 2021 5:49:04 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: Hello admin@gmail.com
-июл 08, 2021 5:49:04 PM org.sdargol.http.url.URLParser run
-INFO: [START PARSE URL]: pool-1-thread-1
-июл 08, 2021 5:49:04 PM org.sdargol.http.url.URLParser run
-INFO: [RESPONSE]: {"msg":"Card successfully created"}
-июл 08, 2021 5:49:05 PM org.sdargol.http.filters.FilterCORS doFilter
-INFO: CORS Filter run
-июл 08, 2021 5:49:05 PM org.sdargol.http.filters.FilterJSON doFilter
-INFO: JSONFilter run
-июл 08, 2021 5:49:05 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: JWT Filter run
-июл 08, 2021 5:49:05 PM org.sdargol.http.url.URLParser run
-INFO: [START PARSE URL]: pool-1-thread-2
-июл 08, 2021 5:49:05 PM org.sdargol.http.filters.FilterCORS doFilter
-INFO: CORS Filter run
-июл 08, 2021 5:49:05 PM org.sdargol.http.filters.FilterJSON doFilter
-INFO: JSONFilter run
-июл 08, 2021 5:49:05 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: JWT Filter run
-июл 08, 2021 5:49:05 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: Hello admin@gmail.com
-июл 08, 2021 5:49:05 PM org.sdargol.http.url.URLParser run
-INFO: [START PARSE URL]: pool-1-thread-3
-июл 08, 2021 5:49:05 PM org.sdargol.http.url.URLParser run
-INFO: [RESPONSE]: [{"number":1234123412341234,"status":false,"id":1},{"number":1234123412341235,"status":true,"id":2},{"number":1234123412341236,"status":true,"id":3},{"number":1234123412341237,"status":false,"id":4},{"number":1234123412341238,"status":false,"id":5},{"number":1234123412341239,"status":false,"id":6},{"number":1234123412341240,"status":false,"id":7}]
-июл 08, 2021 5:49:07 PM org.sdargol.http.filters.FilterCORS doFilter
-INFO: CORS Filter run
-июл 08, 2021 5:49:07 PM org.sdargol.http.filters.FilterJSON doFilter
-INFO: JSONFilter run
-июл 08, 2021 5:49:07 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: JWT Filter run
-июл 08, 2021 5:49:07 PM org.sdargol.http.url.URLParser run
-INFO: [START PARSE URL]: pool-1-thread-1
-июл 08, 2021 5:49:07 PM org.sdargol.http.filters.FilterCORS doFilter
-INFO: CORS Filter run
-июл 08, 2021 5:49:07 PM org.sdargol.http.filters.FilterJSON doFilter
-INFO: JSONFilter run
-июл 08, 2021 5:49:07 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: JWT Filter run
-июл 08, 2021 5:49:07 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: Hello admin@gmail.com
-июл 08, 2021 5:49:07 PM org.sdargol.http.url.URLParser run
-INFO: [START PARSE URL]: pool-1-thread-2
-июл 08, 2021 5:49:07 PM org.sdargol.http.url.URLParser run
-INFO: [RESPONSE]: [{"name":"admin@gmail.com","password":"password","id":777},{"name":"user@gmail.com","password":"password","id":778}]
-июл 08, 2021 5:49:10 PM org.sdargol.http.filters.FilterCORS doFilter
-INFO: CORS Filter run
-июл 08, 2021 5:49:10 PM org.sdargol.http.filters.FilterJSON doFilter
-INFO: JSONFilter run
-июл 08, 2021 5:49:10 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: JWT Filter run
-июл 08, 2021 5:49:10 PM org.sdargol.http.url.URLParser run
-INFO: [START PARSE URL]: pool-1-thread-3
-июл 08, 2021 5:49:10 PM org.sdargol.http.filters.FilterCORS doFilter
-INFO: CORS Filter run
-июл 08, 2021 5:49:10 PM org.sdargol.http.filters.FilterJSON doFilter
-INFO: JSONFilter run
-июл 08, 2021 5:49:10 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: JWT Filter run
-июл 08, 2021 5:49:10 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: Hello admin@gmail.com
-июл 08, 2021 5:49:10 PM org.sdargol.http.url.URLParser run
-INFO: [START PARSE URL]: pool-1-thread-1
-июл 08, 2021 5:49:10 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 1:50:50 PM org.sdargol.http.url.URLParser run
 INFO: [RESPONSE]: {"msg":"User and Account successfully created"}
-июл 08, 2021 5:49:11 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 1:50:54 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:49:11 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 1:50:54 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:49:11 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 1:50:54 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:49:11 PM org.sdargol.http.url.URLParser run
-INFO: [START PARSE URL]: pool-1-thread-2
-июл 08, 2021 5:49:11 PM org.sdargol.http.filters.FilterCORS doFilter
-INFO: CORS Filter run
-июл 08, 2021 5:49:11 PM org.sdargol.http.filters.FilterJSON doFilter
-INFO: JSONFilter run
-июл 08, 2021 5:49:11 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: JWT Filter run
-июл 08, 2021 5:49:11 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: Hello admin@gmail.com
-июл 08, 2021 5:49:11 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 1:50:54 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-3
-июл 08, 2021 5:49:11 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 1:50:54 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 1:50:54 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 1:50:54 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 1:50:54 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 1:50:54 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 1:50:54 PM org.sdargol.http.url.URLParser run
 INFO: [RESPONSE]: [{"name":"admin@gmail.com","password":"password","id":777},{"name":"user@gmail.com","password":"password","id":778},{"name":"dimon@gmail.com","password":"password123","id":779}]
-июл 08, 2021 5:49:13 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 2:11:06 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT(777, 1) PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_account_id INT NOT NULL,to_account_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (to_account_id) REFERENCES accounts(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (FALSE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money) VALUES (10000), (250000);INSERT INTO transactions (from_account_id, to_account_id, counts, status) VALUES (1,2,5000,FALSE);INSERT INTO roles (user_id, role) VALUES (777,'USER'),(777,'ADMIN'), (778,'USER');INSERT INTO AccountToUser (account_id, user_id) VALUES (1,777), (2,778);INSERT INTO CardsToAccount (account_id, card_id) VALUES (1,1), (2,2);
+июл 09, 2021 2:11:06 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 09, 2021 2:11:06 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 09, 2021 2:11:06 PM org.sdargol.utils.Props <clinit>
+INFO: Props success load
+июл 09, 2021 2:11:06 PM org.sdargol.db.dao.core.SManagerDAO <clinit>
+INFO: SManagerDAO success load
+июл 09, 2021 2:11:06 PM org.sdargol.controllers.core.SControllerManager <clinit>
+INFO: SControllerManager success load
+июл 09, 2021 2:11:06 PM org.sdargol.http.server.Server start
+INFO: Context " \ " created
+июл 09, 2021 2:11:06 PM org.sdargol.http.server.Server start
+INFO: Context "Auth" created
+июл 09, 2021 2:11:06 PM org.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 09, 2021 2:11:11 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:49:13 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 2:11:11 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:49:13 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 2:11:11 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:49:13 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 2:11:11 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-1
-июл 08, 2021 5:49:13 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 2:11:12 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:49:13 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 2:11:12 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:49:13 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 2:11:12 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:49:13 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: Hello admin@gmail.com
-июл 08, 2021 5:49:13 PM org.sdargol.http.url.URLParser run
-INFO: [START PARSE URL]: pool-1-thread-2
-июл 08, 2021 5:49:13 PM org.sdargol.http.url.URLParser run
-INFO: [RESPONSE]: {"msg":"Transaction for transfer from: 2 to 1 successfully created. Count: 555"}
-июл 08, 2021 5:49:14 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 2:11:12 PM org.sdargol.json.jwt.JWTProvider validateToken
+WARNING: Error validate token
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-07-09T14:00:09Z. Current time: 2021-07-09T14:11:12Z, a difference of 663263 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at org.sdargol.json.jwt.JWTProvider.validateToken(JWTProvider.java:30)
+	at org.sdargol.http.filters.FilterJWT.doFilter(FilterJWT.java:60)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterJSON.doFilter(FilterJSON.java:18)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterCORS.doFilter(FilterCORS.java:22)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:647)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+июл 09, 2021 2:11:52 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:49:14 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 2:11:52 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:49:14 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 2:11:52 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:49:14 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 2:11:52 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-3
-июл 08, 2021 5:49:14 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 2:11:52 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:49:14 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 2:11:52 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:49:14 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 2:11:52 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:49:14 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: Hello admin@gmail.com
-июл 08, 2021 5:49:14 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 2:11:52 PM org.sdargol.json.jwt.JWTProvider validateToken
+WARNING: Error validate token
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-07-09T14:00:09Z. Current time: 2021-07-09T14:11:52Z, a difference of 703349 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at org.sdargol.json.jwt.JWTProvider.validateToken(JWTProvider.java:30)
+	at org.sdargol.http.filters.FilterJWT.doFilter(FilterJWT.java:60)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterJSON.doFilter(FilterJSON.java:18)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterCORS.doFilter(FilterCORS.java:22)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:647)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+июл 09, 2021 2:11:57 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:11:57 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:11:57 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:11:57 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:11:57 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:12:17 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:12:17 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:12:17 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:12:17 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-1
-июл 08, 2021 5:49:14 PM org.sdargol.http.url.URLParser run
-INFO: [RESPONSE]: [{"fromAccountId":1,"toAccountId":2,"count":5000,"status":false,"id":1},{"fromAccountId":2,"toAccountId":1,"count":555,"status":false,"id":2}]
-июл 08, 2021 5:49:18 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 2:12:17 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:49:18 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 2:12:17 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:49:18 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 2:12:17 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:49:18 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 2:12:17 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 2:12:17 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-2
-июл 08, 2021 5:49:18 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 2:12:17 PM org.sdargol.http.url.URLParser run
+INFO: [NEXT SEARCH]: pool-1-thread-2
+июл 09, 2021 2:12:17 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE AFTER FULL SEARCH]: {"number":1,"money":10000,"id":1} pool-1-thread-2
+июл 09, 2021 2:12:21 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:49:18 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 2:12:21 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:49:18 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 2:12:21 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:49:18 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: Hello admin@gmail.com
-июл 08, 2021 5:49:18 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 2:12:21 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-3
-июл 08, 2021 5:49:18 PM org.sdargol.http.url.URLParser run
-INFO: [RESPONSE]: {"msg":"Transaction with id = 1 successfully confirm, row = 1"}
-июл 08, 2021 5:49:24 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 2:12:21 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:49:24 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 2:12:21 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:49:24 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 2:12:21 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:49:24 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 2:12:21 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 2:12:21 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-1
-июл 08, 2021 5:49:24 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 2:12:21 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: {"number":1,"money":10100,"id":1}
+июл 09, 2021 2:12:22 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:49:24 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 2:12:22 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:49:24 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 2:12:22 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:49:24 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: Hello admin@gmail.com
-июл 08, 2021 5:49:24 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 2:12:22 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 09, 2021 2:12:22 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:12:22 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:12:22 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:12:22 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 2:12:22 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-2
-июл 08, 2021 5:49:24 PM org.sdargol.http.url.URLParser run
-INFO: [RESPONSE]: [{"fromAccountId":1,"toAccountId":2,"count":5000,"status":true,"id":1},{"fromAccountId":2,"toAccountId":1,"count":555,"status":false,"id":2}]
-июл 08, 2021 5:49:28 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 2:12:22 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: {"number":1,"money":10200,"id":1}
+июл 09, 2021 2:12:22 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:49:28 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 2:12:22 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:49:28 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 2:12:22 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:49:28 PM org.sdargol.http.url.URLParser run
-INFO: [START PARSE URL]: pool-1-thread-3
-июл 08, 2021 5:49:28 PM org.sdargol.http.filters.FilterCORS doFilter
-INFO: CORS Filter run
-июл 08, 2021 5:49:28 PM org.sdargol.http.filters.FilterJSON doFilter
-INFO: JSONFilter run
-июл 08, 2021 5:49:28 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: JWT Filter run
-июл 08, 2021 5:49:28 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: Hello admin@gmail.com
-июл 08, 2021 5:49:28 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 2:12:22 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-1
-июл 08, 2021 5:49:28 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 2:12:22 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:12:22 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:12:22 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:12:22 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 2:12:22 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 09, 2021 2:12:22 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: {"number":1,"money":10300,"id":1}
+июл 09, 2021 2:12:23 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:12:23 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:12:23 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:12:23 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 09, 2021 2:12:23 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:12:23 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:12:23 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:12:23 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 2:12:23 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 2:12:23 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: {"number":1,"money":10400,"id":1}
+июл 09, 2021 2:12:26 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:12:26 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:12:26 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:12:26 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 09, 2021 2:12:26 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:12:26 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:12:26 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:12:26 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 2:12:26 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 09, 2021 2:12:26 PM org.sdargol.http.url.URLParser run
+INFO: [NEXT SEARCH]: pool-1-thread-2
+июл 09, 2021 2:12:26 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE AFTER FULL SEARCH]: {"number":1,"money":10400,"id":1} pool-1-thread-2
+июл 09, 2021 2:12:28 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:12:28 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:12:28 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:12:28 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 2:12:28 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:12:28 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:12:28 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:12:28 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 2:12:28 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 09, 2021 2:12:28 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: [{"number":1234123412341234,"status":false,"id":1},{"number":1234123412341235,"status":true,"id":2},{"number":1234123412341236,"status":true,"id":3}]
+июл 09, 2021 2:12:40 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:12:40 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:12:40 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:12:40 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 09, 2021 2:12:40 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:12:40 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:12:40 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:12:40 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 2:12:40 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 2:12:40 PM org.sdargol.http.url.URLParser run
 INFO: [RESPONSE]: {"msg":"Card with id = 1 successfully confirm"}
-июл 08, 2021 5:49:32 PM org.sdargol.http.filters.FilterCORS doFilter
+июл 09, 2021 2:12:42 PM org.sdargol.http.filters.FilterCORS doFilter
 INFO: CORS Filter run
-июл 08, 2021 5:49:32 PM org.sdargol.http.filters.FilterJSON doFilter
+июл 09, 2021 2:12:42 PM org.sdargol.http.filters.FilterJSON doFilter
 INFO: JSONFilter run
-июл 08, 2021 5:49:32 PM org.sdargol.http.filters.FilterJWT doFilter
+июл 09, 2021 2:12:42 PM org.sdargol.http.filters.FilterJWT doFilter
 INFO: JWT Filter run
-июл 08, 2021 5:49:32 PM org.sdargol.http.url.URLParser run
-INFO: [START PARSE URL]: pool-1-thread-2
-июл 08, 2021 5:49:32 PM org.sdargol.http.filters.FilterCORS doFilter
-INFO: CORS Filter run
-июл 08, 2021 5:49:32 PM org.sdargol.http.filters.FilterJSON doFilter
-INFO: JSONFilter run
-июл 08, 2021 5:49:32 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: JWT Filter run
-июл 08, 2021 5:49:32 PM org.sdargol.http.filters.FilterJWT doFilter
-INFO: Hello admin@gmail.com
-июл 08, 2021 5:49:32 PM org.sdargol.http.url.URLParser run
+июл 09, 2021 2:12:42 PM org.sdargol.http.url.URLParser run
 INFO: [START PARSE URL]: pool-1-thread-3
-июл 08, 2021 5:49:32 PM org.sdargol.http.url.URLParser run
-INFO: [RESPONSE]: [{"number":1234123412341234,"status":true,"id":1},{"number":1234123412341235,"status":true,"id":2},{"number":1234123412341236,"status":true,"id":3},{"number":1234123412341237,"status":false,"id":4},{"number":1234123412341238,"status":false,"id":5},{"number":1234123412341239,"status":false,"id":6},{"number":1234123412341240,"status":false,"id":7}]
+июл 09, 2021 2:12:42 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:12:42 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:12:42 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:12:42 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 2:12:42 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 09, 2021 2:12:42 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: [{"number":1234123412341234,"status":true,"id":1},{"number":1234123412341235,"status":true,"id":2},{"number":1234123412341236,"status":true,"id":3}]
+июл 09, 2021 2:12:48 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:12:48 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:12:48 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:12:48 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 2:12:48 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:12:48 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:12:48 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:12:48 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 2:12:48 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 09, 2021 2:12:48 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: {"msg":"Card successfully created"}
+июл 09, 2021 2:12:51 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:12:51 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:12:51 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:12:51 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 09, 2021 2:12:51 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:12:51 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:12:51 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:12:51 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 2:12:51 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 2:12:51 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: [{"number":1234123412341234,"status":true,"id":1},{"number":1234123412341235,"status":true,"id":2},{"number":1234123412341236,"status":true,"id":3},{"number":1234123412341237,"status":false,"id":4}]
+июл 09, 2021 2:13:01 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:13:01 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:13:01 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:13:01 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 09, 2021 2:13:01 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:13:01 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:13:01 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:13:01 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 2:13:01 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 2:13:01 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: {"msg":"Transaction for transfer from: 2 to 1 successfully created. Count: 7777"}
+июл 09, 2021 2:13:04 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:13:04 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:13:04 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:13:04 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 09, 2021 2:13:04 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:13:04 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:13:04 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:13:04 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 2:13:04 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 09, 2021 2:13:04 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: [{"fromAccountId":1,"toAccountId":2,"count":5000,"status":false,"id":1},{"fromAccountId":2,"toAccountId":1,"count":7777,"status":false,"id":2}]
+июл 09, 2021 2:13:13 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:13:13 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:13:13 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:13:13 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 2:13:13 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:13:13 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:13:13 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:13:13 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 2:13:13 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 09, 2021 2:13:13 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: [{"number":1,"money":10400,"id":1},{"number":2,"money":250000,"id":2}]
+июл 09, 2021 2:13:33 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:13:33 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:13:33 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:13:33 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 09, 2021 2:13:33 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:13:33 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:13:33 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:13:33 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 2:13:33 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 2:13:33 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: {"msg":"Transaction with id = 2 successfully confirm, row = 1"}
+июл 09, 2021 2:13:35 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:13:35 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:13:35 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:13:35 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 09, 2021 2:13:35 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:13:35 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:13:35 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:13:35 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 2:13:35 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 09, 2021 2:13:35 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: [{"fromAccountId":1,"toAccountId":2,"count":5000,"status":false,"id":1},{"fromAccountId":2,"toAccountId":1,"count":7777,"status":true,"id":2}]
+июл 09, 2021 2:13:45 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:13:45 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:13:45 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:13:45 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 2:13:45 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:13:45 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:13:45 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:13:45 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 2:13:45 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 09, 2021 2:13:45 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: [{"number":1,"money":18177,"id":1},{"number":2,"money":242223,"id":2}]
+июл 09, 2021 2:13:54 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:13:54 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:13:54 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:13:54 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 09, 2021 2:13:54 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:13:54 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:13:54 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:13:54 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 2:13:54 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 2:13:54 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: [{"name":"admin@gmail.com","password":"password","id":777},{"name":"user@gmail.com","password":"password","id":778}]
+июл 09, 2021 2:13:59 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:13:59 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:13:59 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:13:59 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 09, 2021 2:13:59 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:13:59 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:13:59 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:13:59 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 2:13:59 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 09, 2021 2:13:59 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: {"msg":"User and Account successfully created"}
+июл 09, 2021 2:14:01 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:14:01 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:14:01 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:14:01 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 2:14:01 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:14:01 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:14:01 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:14:01 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 2:14:01 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 09, 2021 2:14:01 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: [{"name":"admin@gmail.com","password":"password","id":777},{"name":"user@gmail.com","password":"password","id":778},{"name":"dimon@gmail.com","password":"password123","id":779}]
+июл 09, 2021 2:27:04 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT(777, 1) PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_account_id INT NOT NULL,to_account_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (to_account_id) REFERENCES accounts(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (FALSE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money) VALUES (10000), (250000);INSERT INTO transactions (from_account_id, to_account_id, counts, status) VALUES (1,2,5000,FALSE);INSERT INTO roles (user_id, role) VALUES (777,'USER'),(777,'ADMIN'), (778,'USER');INSERT INTO AccountToUser (account_id, user_id) VALUES (1,777), (2,778);INSERT INTO CardsToAccount (account_id, card_id) VALUES (1,1), (2,2);
+июл 09, 2021 2:27:04 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 09, 2021 2:27:04 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 09, 2021 2:27:04 PM org.sdargol.utils.Props <clinit>
+INFO: Props success load
+июл 09, 2021 2:27:04 PM org.sdargol.db.dao.core.SManagerDAO <clinit>
+INFO: SManagerDAO success load
+июл 09, 2021 2:27:04 PM org.sdargol.controllers.core.SControllerManager <clinit>
+INFO: SControllerManager success load
+июл 09, 2021 2:27:04 PM org.sdargol.http.server.Server start
+INFO: Context " \ " created
+июл 09, 2021 2:27:04 PM org.sdargol.http.server.Server start
+INFO: Context "Auth" created
+июл 09, 2021 2:27:04 PM org.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 09, 2021 2:27:18 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:27:18 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:27:18 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:27:18 PM org.sdargol.http.security.SecurityEngine checkSecurity
+INFO: Найден контроллер: org.sdargol.controllers.ControllerCards аннотация Security отсутствует, передаем запрос дальше
+июл 09, 2021 2:27:18 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 2:27:18 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: [{"number":1234123412341234,"status":false,"id":1},{"number":1234123412341235,"status":true,"id":2},{"number":1234123412341236,"status":true,"id":3}]
+июл 09, 2021 2:35:31 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:35:31 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:35:31 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:35:31 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 09, 2021 2:35:31 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 2:35:31 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 2:35:31 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 2:35:31 PM org.sdargol.http.security.SecurityEngine checkSecurity
+INFO: Найден контроллер: org.sdargol.controllers.ControllerCards аннотация Security отсутствует, передаем запрос дальше
+июл 09, 2021 2:35:31 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 09, 2021 2:35:31 PM org.sdargol.http.url.URLParser run
+INFO: [NEXT SEARCH]: pool-1-thread-3
+июл 09, 2021 2:35:31 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE AFTER FULL SEARCH]: {"number":1,"money":10000,"id":1} pool-1-thread-3
+июл 09, 2021 4:00:58 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT(777, 1) PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_account_id INT NOT NULL,to_account_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (to_account_id) REFERENCES accounts(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (FALSE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money) VALUES (10000), (250000);INSERT INTO transactions (from_account_id, to_account_id, counts, status) VALUES (1,2,5000,FALSE);INSERT INTO roles (user_id, role) VALUES (777,'USER'),(777,'ADMIN'), (778,'USER');INSERT INTO AccountToUser (account_id, user_id) VALUES (1,777), (2,778);INSERT INTO CardsToAccount (account_id, card_id) VALUES (1,1), (2,2);
+июл 09, 2021 4:00:58 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 09, 2021 4:00:58 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 09, 2021 4:00:58 PM org.sdargol.utils.Props <clinit>
+INFO: Props success load
+июл 09, 2021 4:00:58 PM org.sdargol.db.dao.core.SManagerDAO <clinit>
+INFO: SManagerDAO success load
+июл 09, 2021 4:00:58 PM org.sdargol.controllers.core.SControllerManager <clinit>
+INFO: SControllerManager success load
+июл 09, 2021 4:00:58 PM org.sdargol.http.server.Server start
+INFO: Context " \ " created
+июл 09, 2021 4:00:58 PM org.sdargol.http.server.Server start
+INFO: Context "Auth" created
+июл 09, 2021 4:00:58 PM org.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 09, 2021 4:01:01 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 4:01:01 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 4:01:01 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 4:01:01 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 4:01:01 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 4:01:01 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 4:01:01 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 4:01:01 PM org.sdargol.json.jwt.JWTProvider validateToken
+WARNING: Error validate token
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-07-09T14:21:57Z. Current time: 2021-07-09T16:01:01Z, a difference of 5944403 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at org.sdargol.json.jwt.JWTProvider.validateToken(JWTProvider.java:30)
+	at org.sdargol.http.filters.FilterJWT.doFilter(FilterJWT.java:60)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterJSON.doFilter(FilterJSON.java:18)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterCORS.doFilter(FilterCORS.java:22)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:647)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+июл 09, 2021 4:01:05 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 4:01:05 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 4:01:05 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 4:01:05 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 4:01:05 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 4:02:35 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT(777, 1) PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_account_id INT NOT NULL,to_account_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (to_account_id) REFERENCES accounts(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (FALSE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money) VALUES (10000), (250000);INSERT INTO transactions (from_account_id, to_account_id, counts, status) VALUES (1,2,5000,FALSE);INSERT INTO roles (user_id, role) VALUES (777,'USER'),(777,'ADMIN'), (778,'USER');INSERT INTO AccountToUser (account_id, user_id) VALUES (1,777), (2,778);INSERT INTO CardsToAccount (account_id, card_id) VALUES (1,1), (2,2);
+июл 09, 2021 4:02:35 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 09, 2021 4:02:35 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 09, 2021 4:02:36 PM org.sdargol.utils.Props <clinit>
+INFO: Props success load
+июл 09, 2021 4:02:36 PM org.sdargol.db.dao.core.SManagerDAO <clinit>
+INFO: SManagerDAO success load
+июл 09, 2021 4:02:36 PM org.sdargol.controllers.core.SControllerManager <clinit>
+INFO: SControllerManager success load
+июл 09, 2021 4:02:36 PM org.sdargol.http.server.Server start
+INFO: Context " \ " created
+июл 09, 2021 4:02:36 PM org.sdargol.http.server.Server start
+INFO: Context "Auth" created
+июл 09, 2021 4:02:36 PM org.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 09, 2021 4:02:56 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 4:02:56 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 4:02:56 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 4:02:56 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 4:02:56 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 4:02:56 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 4:02:56 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 4:02:56 PM org.sdargol.json.jwt.JWTProvider validateToken
+WARNING: Error validate token
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-07-09T14:21:57Z. Current time: 2021-07-09T16:02:56Z, a difference of 6059434 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at org.sdargol.json.jwt.JWTProvider.validateToken(JWTProvider.java:30)
+	at org.sdargol.http.filters.FilterJWT.doFilter(FilterJWT.java:60)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterJSON.doFilter(FilterJSON.java:18)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at org.sdargol.http.filters.FilterCORS.doFilter(FilterCORS.java:22)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:647)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+июл 09, 2021 4:03:00 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 4:03:00 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 4:03:00 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 4:03:00 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 09, 2021 4:03:00 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 4:03:00 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 4:03:00 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 4:03:00 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 4:03:00 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 4:03:00 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: {"msg":"Transaction for transfer from: 2 to 1 successfully created. Count: 7777"}
+июл 09, 2021 4:04:15 PM org.sdargol.utils.FileLoader listToString
+INFO: Success load: CREATE TABLE cards (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT(1234123412341234, 1) NOT NULL,status BOOLEAN NOT NULL);CREATE TABLE users (id INT AUTO_INCREMENT(777, 1) PRIMARY KEY,login VARCHAR(255) UNIQUE NOT NULL,password VARCHAR(255) NOT NULL);CREATE TABLE accounts (id INT AUTO_INCREMENT PRIMARY KEY,number BIGINT AUTO_INCREMENT NOT NULL,money INT NOT NULL);CREATE TABLE transactions (id INT AUTO_INCREMENT PRIMARY KEY,from_account_id INT NOT NULL,to_account_id INT NOT NULL,counts INT NOT NULL,status BOOLEAN NOT NULL,FOREIGN KEY (from_account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (to_account_id) REFERENCES accounts(id) ON DELETE CASCADE);CREATE TABLE roles (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,role VARCHAR(255) NOT NULL,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE AccountToUser (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,user_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);CREATE TABLE CardsToAccount (id INT AUTO_INCREMENT PRIMARY KEY,account_id INT NOT NULL,card_id INT NOT NULL,FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE,FOREIGN KEY (card_id) REFERENCES cards(id) ON DELETE CASCADE);INSERT INTO cards (status) VALUES (FALSE), (TRUE), (TRUE);INSERT INTO users (login, password) VALUES ('admin@gmail.com', 'password'), ('user@gmail.com', 'password');INSERT INTO accounts (money) VALUES (10000), (250000);INSERT INTO transactions (from_account_id, to_account_id, counts, status) VALUES (1,2,5000,FALSE);INSERT INTO roles (user_id, role) VALUES (777,'USER'),(777,'ADMIN'), (778,'USER');INSERT INTO AccountToUser (account_id, user_id) VALUES (1,777), (2,778);INSERT INTO CardsToAccount (account_id, card_id) VALUES (1,1), (2,2);
+июл 09, 2021 4:04:15 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Success load: org.h2.Driver
+июл 09, 2021 4:04:15 PM org.sdargol.db.h2.ConnectionPool <clinit>
+INFO: Create JdbcConnectionPool, max connections: 10
+июл 09, 2021 4:04:15 PM org.sdargol.utils.Props <clinit>
+INFO: Props success load
+июл 09, 2021 4:04:15 PM org.sdargol.db.dao.core.SManagerDAO <clinit>
+INFO: SManagerDAO success load
+июл 09, 2021 4:04:15 PM org.sdargol.controllers.core.SControllerManager <clinit>
+INFO: SControllerManager success load
+июл 09, 2021 4:04:15 PM org.sdargol.http.server.Server start
+INFO: Context " \ " created
+июл 09, 2021 4:04:15 PM org.sdargol.http.server.Server start
+INFO: Context "Auth" created
+июл 09, 2021 4:04:15 PM org.sdargol.http.server.Server start
+INFO: Server success started on localhost:8080
+июл 09, 2021 4:04:24 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 4:04:24 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 4:04:24 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 4:04:24 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 4:04:24 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 4:04:24 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 4:04:24 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 4:04:24 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 4:04:24 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 09, 2021 4:04:24 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: [{"fromAccountId":1,"toAccountId":2,"count":5000,"status":false,"id":1}]
+июл 09, 2021 4:04:35 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 4:04:35 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 4:04:35 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 4:04:35 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 09, 2021 4:04:35 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 4:04:35 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 4:04:35 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 4:04:35 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 4:04:35 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 4:04:35 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: {"msg":"Transaction for transfer from: 2 to 1 successfully created. Count: 7777"}
+июл 09, 2021 4:04:37 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 4:04:37 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 4:04:37 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 4:04:37 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 09, 2021 4:04:37 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 4:04:37 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 4:04:37 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 4:04:37 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 4:04:37 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 09, 2021 4:04:37 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: [{"fromAccountId":1,"toAccountId":2,"count":5000,"status":false,"id":1},{"fromAccountId":2,"toAccountId":1,"count":7777,"status":false,"id":2}]
+июл 09, 2021 4:05:33 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 4:05:33 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 4:05:33 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 4:05:33 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 4:05:33 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 4:05:33 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 4:05:33 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 4:05:33 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 4:05:33 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-2
+июл 09, 2021 4:05:33 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: {"msg":"Transaction with id = 2 successfully confirm, row = 1"}
+июл 09, 2021 4:05:36 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 4:05:36 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 4:05:36 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 4:05:36 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-3
+июл 09, 2021 4:05:36 PM org.sdargol.http.filters.FilterCORS doFilter
+INFO: CORS Filter run
+июл 09, 2021 4:05:36 PM org.sdargol.http.filters.FilterJSON doFilter
+INFO: JSONFilter run
+июл 09, 2021 4:05:36 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: JWT Filter run
+июл 09, 2021 4:05:36 PM org.sdargol.http.filters.FilterJWT doFilter
+INFO: Hello user@gmail.com
+июл 09, 2021 4:05:36 PM org.sdargol.http.url.URLParser run
+INFO: [START PARSE URL]: pool-1-thread-1
+июл 09, 2021 4:05:36 PM org.sdargol.http.url.URLParser run
+INFO: [RESPONSE]: [{"fromAccountId":1,"toAccountId":2,"count":5000,"status":false,"id":1},{"fromAccountId":2,"toAccountId":1,"count":7777,"status":true,"id":2}]

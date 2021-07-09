@@ -42,4 +42,13 @@ public class DTOUserTransfer {
     public void setCount(Integer count) {
         this.count = count;
     }
+
+    @Override
+    public String toString() {
+        return "DTOUserTransfer{" +
+                "loginTo='" + loginTo + '\'' +
+                ", loginFrom='" + loginFrom + '\'' +
+                ", count=" + count +
+                '}';
+    }
 }

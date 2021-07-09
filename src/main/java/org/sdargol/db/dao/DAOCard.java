@@ -1,6 +1,7 @@
 package org.sdargol.db.dao;
 
 import org.sdargol.db.dao.api.IDAOCard;
+import org.sdargol.db.dao.core.IDAO;
 import org.sdargol.db.h2.ConnectionPool;
 import org.sdargol.dto.DTOAccount;
 import org.sdargol.dto.DTOCard;
@@ -16,7 +17,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class DAOCard implements IDAOCard {
+public class DAOCard implements IDAOCard, IDAO {
     private final static Logger LOGGER = Log.getLogger(DAOCard.class.getName());
 
     @Override

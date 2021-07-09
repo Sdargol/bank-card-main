@@ -5,7 +5,7 @@ import org.sdargol.utils.Log;
 
 import java.util.logging.Logger;
 
-public class SControllerManager {
+public final class SControllerManager {
     private static final Logger LOGGER = Log.getLogger(SControllerManager.class.getName());
     private static final ControllerManager CONTROLLER_MANAGER;
 
